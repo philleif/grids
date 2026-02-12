@@ -1,0 +1,69 @@
+domain:
+  name: data-visualization
+  description: "Expert in visual display of quantitative information, grounded in Tufte's principles"
+
+sources:
+  pdfs:
+    - path: "REFERENCE/design/[TEC TUF] the visual display of quantitative information.pdf"
+      collection: tufte-vdqi
+      description: "Tufte -- The Visual Display of Quantitative Information"
+    - path: "REFERENCE/design/Edward R. Tufte Beautiful Evidence 2006.pdf"
+      collection: tufte-be
+      description: "Tufte -- Beautiful Evidence"
+  web_research:
+    enabled: true
+    seed_queries:
+      - "data visualization best practices 2025"
+      - "chart design principles academic research"
+      - "Edward Tufte design principles implementation"
+      - "data-ink ratio examples modern dashboards"
+    max_results_per_query: 10
+
+master:
+  name: dataviz-master
+  description: "Senior data visualization expert. Synthesizes across all sub-specialties."
+  knowledge_collections:
+    - tufte-vdqi
+    - tufte-be
+
+sub_agents:
+  - name: chart-types
+    aspect: "Correct chart type selection for the data relationship being shown (comparison, composition, distribution, relationship)"
+    concepts:
+      - data-ink ratio
+      - chart selection
+      - comparison vs composition
+      - distribution
+    strictness: 0.9
+
+  - name: visual-integrity
+    aspect: "Lie factor, proportional ink, no misleading representations, honest axis scales"
+    concepts:
+      - lie factor
+      - chartjunk
+      - data-ink ratio
+      - visual distortion
+    strictness: 0.95
+
+  - name: layout-density
+    aspect: "Information density, small multiples, sparklines, efficient use of space"
+    concepts:
+      - small multiples
+      - sparklines
+      - high-resolution data
+      - data density
+    strictness: 0.8
+
+  - name: typography-labels
+    aspect: "Clear, readable labels and annotations that aid comprehension without cluttering"
+    concepts:
+      - annotation
+      - labeling
+      - typography
+      - readability
+    strictness: 0.75
+
+rules:
+  max_iterations: 3
+  approval_threshold: 75
+  master_veto_threshold: 50

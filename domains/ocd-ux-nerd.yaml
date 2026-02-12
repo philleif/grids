@@ -1,0 +1,304 @@
+domain:
+  name: ocd-ux-nerd
+  description: "Obsessively rigorous product design expertise -- UX patterns, UI kits, accessibility, usability heuristics, information architecture, interaction design, and user research methodology -- grounded in Nielsen Norman Group research, Don Norman, Jakob Nielsen, Steve Krug, and WCAG standards. Takes the perspective of a very strict NNG research fellow who will not let a single usability violation slide."
+
+sources:
+  pdfs:
+    - path: "REFERENCE/design/the-design-of-everyday-things.pdf"
+      collection: ux-foundations
+      description: "Don Norman -- The Design of Everyday Things (revised 2013)"
+    - path: "REFERENCE/design/interaction-of-color.pdf"
+      collection: ux-visual
+      description: "Josef Albers -- Interaction of Color (for color accessibility grounding)"
+  web_research:
+    enabled: true
+    seed_queries:
+      # === NNG REPORT CORPUS (verbatim report titles as queries for maximum retrieval) ===
+      # Accessibility
+      - "nngroup.com usability guidelines accessible web design assistive technology screen readers"
+      - "nngroup.com how to conduct usability studies for accessibility"
+      - "nngroup.com UX design for seniors ages 65 and older"
+      - "WCAG 2.2 guidelines success criteria conformance levels 2025"
+      - "ARIA roles states properties WAI-ARIA best practices"
+      - "screen reader usability testing NVDA JAWS VoiceOver methodology"
+      - "keyboard navigation focus management skip links accessibility"
+      - "color contrast ratio WCAG AA AAA compliance tools"
+      - "cognitive accessibility plain language reading level design"
+      - "inclusive design principles Microsoft inclusive design toolkit"
+      # Interaction design
+      - "nngroup.com helping users make decisions reduce choice overload"
+      - "nngroup.com customization features done correctly"
+      - "Nielsen Norman Group 10 usability heuristics for user interface design"
+      - "Fitts law target size touch targets interaction design"
+      - "Hick law choice complexity response time UX"
+      - "Jakob law users spend most time on other sites expectations"
+      - "progressive disclosure interaction complexity management"
+      - "direct manipulation vs indirect manipulation interface paradigms"
+      - "error prevention error recovery undo affordances"
+      - "feedback latency perceived performance loading states skeleton screens"
+      # Navigation and information architecture
+      - "nngroup.com intranet information architecture design methods case studies"
+      - "nngroup.com site map usability"
+      - "information scent foraging theory navigation design"
+      - "card sorting tree testing IA validation methods"
+      - "breadcrumb navigation patterns wayfinding"
+      - "mega menu hamburger menu navigation pattern comparison"
+      - "taxonomy folksonomy faceted classification IA"
+      - "F-pattern Z-pattern scanning behavior layout implications"
+      # Mobile and responsive design
+      - "nngroup.com user experience mobile applications websites 374 tips"
+      - "nngroup.com tablet website application UX 126 guidelines"
+      - "nngroup.com iPad app website usability"
+      - "mobile-first responsive design breakpoint strategy"
+      - "thumb zone reachability mobile interaction design"
+      - "touch target minimum size 44px WCAG mobile"
+      - "gesture design swipe pinch tap long press conventions"
+      - "responsive typography fluid type scales clamp"
+      - "bottom sheet modal drawer mobile UI patterns"
+      # Ecommerce UX (NNG 13-volume series)
+      - "nngroup.com ecommerce user experience homepage navigation product comparisons"
+      - "nngroup.com ecommerce product pages including reviews"
+      - "nngroup.com ecommerce shopping carts checkout registration"
+      - "nngroup.com ecommerce search filters faceted search routing pages"
+      - "nngroup.com ecommerce trust credibility"
+      - "nngroup.com ecommerce selling strategies"
+      - "checkout flow usability cart abandonment friction reduction"
+      - "product listing page filtering sorting UX patterns"
+      # Web usability
+      - "nngroup.com B2B website usability converting leads customers"
+      - "nngroup.com strategic design frequently asked questions FAQ"
+      - "nngroup.com how people read online eyetracking evidence"
+      - "nngroup.com how to conduct eyetracking studies"
+      - "nngroup.com university websites higher education usability 152 guidelines"
+      - "above the fold myth scrolling behavior evidence"
+      - "page load performance Core Web Vitals UX impact"
+      - "banner blindness ad placement user attention patterns"
+      # Writing for the web / UX writing
+      - "nngroup.com PR on websites attracting journalists"
+      - "nngroup.com social media user experience user-centered social strategies"
+      - "microcopy UX writing error messages button labels"
+      - "content hierarchy scanability inverted pyramid web writing"
+      - "form field labels placeholder text UX writing best practices"
+      - "empty states onboarding copy zero-data design"
+      # User research methods
+      - "nngroup.com user experience careers roles responsibilities"
+      - "nngroup.com marketing email UX research methodology"
+      - "usability testing think-aloud protocol 5 users Nielsen"
+      - "heuristic evaluation severity ratings methodology"
+      - "cognitive walkthrough task analysis user research"
+      - "A/B testing statistical significance sample size UX"
+      - "diary study longitudinal research UX methodology"
+      - "contextual inquiry field study ethnographic methods UX"
+      - "System Usability Scale SUS questionnaire scoring"
+      - "jobs to be done framework outcome-driven innovation"
+      # Design process and UX management (NNG reports)
+      - "nngroup.com journey management practice operational models"
+      - "nngroup.com intranet usability guidelines 300 design content"
+      - "nngroup.com intranet design annual 2023 case studies"
+      - "design thinking double diamond diverge converge"
+      - "UX maturity model organizational design capability"
+      - "design system governance component library management"
+      - "atomic design methodology Brad Frost molecules organisms templates"
+      - "design critique structured feedback methods"
+      # UI kits and component patterns
+      - "material design 3 component guidelines specifications"
+      - "Apple Human Interface Guidelines iOS macOS components"
+      - "Ant Design component library enterprise UI patterns"
+      - "Radix UI primitives accessible component architecture"
+      - "headless UI unstyled component accessibility patterns"
+      - "design tokens systematic design scaling"
+      - "form design patterns best practices validation feedback"
+      - "data table design sorting filtering pagination UX"
+      - "modal dialog accessibility focus trap ARIA"
+      - "toast notification snackbar alert UX patterns timing"
+      - "date picker calendar component usability"
+      - "autocomplete combobox typeahead search input UX"
+      - "stepper wizard multi-step form progress indicator"
+      - "skeleton loading shimmer placeholder perceived performance"
+      # NNG books as queries
+      - "Don Norman Design of Everyday Things affordances signifiers"
+      - "Jakob Nielsen usability engineering discount usability"
+      - "Steve Krug Don't Make Me Think usability principles"
+      - "Alan Cooper About Face interaction design essentials"
+      - "Jenifer Tidwell Designing Interfaces UI patterns"
+      - "Luke Wroblewski Web Form Design filling in the blanks"
+      - "Aarron Walter Designing for Emotion personality in design"
+      - "Susan Weinschenk 100 Things Every Designer Needs to Know About People"
+      # Heuristics and frameworks
+      - "Nielsen 10 heuristics visibility system status match real world"
+      - "Nielsen 10 heuristics user control freedom consistency standards"
+      - "Nielsen 10 heuristics error prevention recognition recall"
+      - "Nielsen 10 heuristics flexibility efficiency aesthetic minimalist"
+      - "Nielsen 10 heuristics help users recover errors documentation"
+      - "Shneiderman eight golden rules interface design"
+      - "Tognazzini first principles interaction design"
+      - "Peter Morville UX honeycomb useful usable desirable findable"
+      - "ISO 9241-210 human-centred design interactive systems"
+    max_results_per_query: 10
+
+master:
+  name: ocd-ux-nerd-master
+  description: "Senior NNG research fellow. Pathologically meticulous about usability. Synthesizes across interaction design, accessibility, information architecture, user research, UI component patterns, and UX writing. Will reject work that violates Nielsen's heuristics, WCAG guidelines, or established UX research findings. Cites specific NNG reports and research when delivering verdicts. Default posture: skeptical until proven usable."
+  knowledge_collections:
+    - ux-foundations
+    - ux-visual
+
+sub_agents:
+  - name: usability-heuristics
+    aspect: "Nielsen's 10 heuristics compliance -- visibility of system status, match between system and real world, user control and freedom, consistency and standards, error prevention, recognition over recall, flexibility and efficiency, aesthetic minimalist design, error recovery, help and documentation"
+    concepts:
+      - visibility of system status
+      - match real world
+      - user control
+      - consistency
+      - error prevention
+      - recognition over recall
+      - flexibility
+      - aesthetic minimalism
+      - error recovery
+      - help documentation
+      - feedback
+      - affordance
+      - signifier
+      - mapping
+      - constraint
+    strictness: 0.95
+
+  - name: accessibility
+    aspect: "WCAG 2.2 compliance and inclusive design -- perceivable, operable, understandable, robust (POUR), screen reader compatibility, keyboard navigation, color contrast, focus management, ARIA, cognitive accessibility"
+    concepts:
+      - WCAG
+      - POUR principles
+      - screen reader
+      - keyboard navigation
+      - focus management
+      - color contrast
+      - ARIA
+      - alt text
+      - skip links
+      - reduced motion
+      - cognitive load
+      - touch target size
+      - text alternatives
+      - captions transcripts
+      - semantic HTML
+    strictness: 0.95
+
+  - name: interaction-design
+    aspect: "Interaction quality -- affordances, signifiers, feedback loops, state management, progressive disclosure, direct manipulation, error handling, loading states, transitions, gesture vocabulary"
+    concepts:
+      - affordance
+      - signifier
+      - feedback
+      - progressive disclosure
+      - direct manipulation
+      - state management
+      - loading states
+      - skeleton screens
+      - error states
+      - empty states
+      - hover states
+      - focus states
+      - transitions
+      - micro-interactions
+      - gesture design
+    strictness: 0.9
+
+  - name: information-architecture
+    aspect: "IA quality -- navigation structure, wayfinding, content hierarchy, labeling, search, categorization, mental models, information scent, card sorting validation"
+    concepts:
+      - navigation structure
+      - wayfinding
+      - breadcrumbs
+      - content hierarchy
+      - labeling
+      - search UX
+      - categorization
+      - mental models
+      - information scent
+      - card sorting
+      - tree testing
+      - taxonomy
+      - faceted navigation
+      - site map
+    strictness: 0.9
+
+  - name: ui-component-patterns
+    aspect: "Component correctness -- proper use of established UI patterns, design system adherence, pattern consistency, component accessibility, form patterns, data display, feedback mechanisms"
+    concepts:
+      - design system
+      - component library
+      - form patterns
+      - input validation
+      - data tables
+      - modals
+      - tooltips
+      - toasts
+      - dropdowns
+      - date pickers
+      - autocomplete
+      - steppers
+      - tabs
+      - accordions
+      - design tokens
+      - atomic design
+    strictness: 0.9
+
+  - name: user-research-rigor
+    aspect: "Research methodology quality -- proper test design, sample sizes, think-aloud protocol, heuristic evaluation severity, task analysis, statistical validity, bias avoidance"
+    concepts:
+      - usability testing
+      - think-aloud
+      - heuristic evaluation
+      - severity ratings
+      - task analysis
+      - cognitive walkthrough
+      - A/B testing
+      - sample size
+      - statistical significance
+      - SUS score
+      - diary study
+      - contextual inquiry
+      - bias avoidance
+      - research triangulation
+    strictness: 0.9
+
+  - name: ux-writing
+    aspect: "UX copy quality -- microcopy clarity, error message helpfulness, button label specificity, onboarding copy, empty state messaging, tone consistency, jargon avoidance, scannability"
+    concepts:
+      - microcopy
+      - error messages
+      - button labels
+      - onboarding copy
+      - empty states
+      - placeholder text
+      - form labels
+      - help text
+      - confirmation dialogs
+      - notification copy
+      - tone of voice
+      - plain language
+      - scannability
+    strictness: 0.85
+
+  - name: mobile-responsive
+    aspect: "Mobile and responsive quality -- thumb zone optimization, touch targets, responsive breakpoints, gesture conventions, mobile-first approach, performance on constrained devices"
+    concepts:
+      - thumb zone
+      - touch targets
+      - responsive breakpoints
+      - mobile-first
+      - gesture conventions
+      - bottom navigation
+      - pull to refresh
+      - swipe actions
+      - responsive images
+      - viewport
+      - fluid typography
+      - performance budget
+    strictness: 0.9
+
+rules:
+  max_iterations: 4
+  approval_threshold: 85
+  master_veto_threshold: 60

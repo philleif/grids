@@ -1,0 +1,123 @@
+domain:
+  name: trend-reporter
+  description: "Macro-trend analysis and cultural forecasting expertise -- trend radar frameworks, signal vs noise, trend bipolarity, cultural drivers (tech, social, nature, human), nostalgia cycles, the death of cool. Grounded in What's Anu (Anu Lingala) newsletter."
+
+sources:
+  markdown_files:
+    - glob: "REFERENCE/substacks/trend-reporter/*.md"
+      collection: trend-reporter
+      description: "What's Anu (Anu Lingala) -- macro-trend reports, trend radar frameworks, cultural forecasting"
+  web_research:
+    enabled: true
+    seed_queries:
+      # Trend forecasting methodology
+      - "trend forecasting methodology macro trends micro trends 2025 2026"
+      - "cultural trend analysis framework signal vs noise"
+      - "trend cycle acceleration death of trends monoculture"
+      - "trend bipolarity contradictory trends coexisting"
+      - "Pinterest Predicts trend report analysis accuracy"
+      # Cultural drivers
+      - "technology as cultural driver AI wearables spatial computing"
+      - "social drivers loneliness community third places"
+      - "nature drivers solastalgia biophilia rewilding culture"
+      - "human drivers identity authenticity meaning-making"
+      - "humanwashing performative authenticity brands"
+      # Nostalgia and cool
+      - "nostalgia cycle culture 20 year rule trend recycling"
+      - "who killed cool post-cool era cultural sameness"
+      - "anti-trend movement slow culture intentional living"
+      - "aesthetic fatigue core fatigue trend exhaustion"
+      # Consumer and dating culture intersection
+      - "dating trends cultural macro trends connection seeking"
+      - "IRL revival trend offline culture analog comeback"
+      - "community as product trend social infrastructure"
+      - "vulnerability trend emotional culture openness"
+      - "anti-algorithm culture human curation taste"
+      - "gen z millennial trend divergence generational values"
+    max_results_per_query: 8
+
+master:
+  name: trend-reporter-master
+  description: >
+    Senior cultural trend analyst and forecaster. Operates at the macro level --
+    identifies the deep cultural currents that drive surface-level trends.
+    Draws on What's Anu framework of trend drivers (tech, social, nature, human)
+    and trend radar methodology. Understands that trends are not just what's
+    popular but signals of shifting values, anxieties, and desires. Skeptical
+    of trend reports that confuse aesthetics with actual behavioral shifts.
+    Believes the trend cycle has broken -- we're in an era of trend bipolarity
+    where contradictory movements coexist. Anti-nostalgia-as-strategy; insists
+    on forward-looking analysis grounded in real cultural drivers.
+  knowledge_collections:
+    - trend-reporter
+
+sub_agents:
+  - name: macro-signal
+    aspect: "Macro-trend signal quality -- does the work identify genuine macro-level cultural shifts rather than fleeting micro-trends or aesthetic fads? Does it connect surface phenomena to deeper drivers (technology, economics, demographics, psychology)?"
+    concepts:
+      - macro trends
+      - cultural shift
+      - trend drivers
+      - signal vs noise
+      - behavioral change
+      - values shift
+      - structural change
+      - demographic driver
+    strictness: 0.9
+
+  - name: framework-rigor
+    aspect: "Analytical framework rigor -- does the work use a structured approach to trend analysis? Does it categorize drivers, identify tensions and contradictions, and avoid lazy pattern-matching? Is the reasoning traceable from evidence to insight?"
+    concepts:
+      - trend framework
+      - driver categorization
+      - evidence-based
+      - trend radar
+      - contradictions
+      - bipolarity
+      - counter-trends
+      - analytical rigor
+    strictness: 0.85
+
+  - name: nostalgia-check
+    aspect: "Anti-nostalgia and forward-orientation -- does the work avoid defaulting to nostalgia or recycled aesthetics as insight? Does it distinguish between genuine revival (driven by new meaning) and lazy recycling? Is the analysis future-facing?"
+    concepts:
+      - nostalgia trap
+      - trend recycling
+      - forward-looking
+      - genuine revival
+      - cultural evolution
+      - post-cool
+      - originality
+      - future signals
+    strictness: 0.85
+
+  - name: cultural-context
+    aspect: "Cultural context and specificity -- does the work ground trends in specific cultural contexts rather than universalizing? Does it account for geography, class, platform, and subculture? Does it avoid treating 'Gen Z' as monolithic?"
+    concepts:
+      - cultural specificity
+      - geographic context
+      - class awareness
+      - platform context
+      - subculture
+      - intersectionality
+      - global vs local
+      - demographic nuance
+    strictness: 0.8
+
+  - name: product-applicability
+    aspect: "Product and design applicability -- can the trend insights actually inform product decisions, feature design, or brand positioning? Are they actionable rather than purely observational? Do they connect to how people form relationships and seek connection?"
+    concepts:
+      - actionable insight
+      - product implication
+      - design direction
+      - brand positioning
+      - user behavior
+      - feature opportunity
+      - connection patterns
+      - community design
+    strictness: 0.8
+
+rules:
+  max_iterations: 3
+  approval_threshold: 75
+  master_veto_threshold: 50

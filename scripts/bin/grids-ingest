@@ -1,0 +1,68 @@
+#!/usr/bin/env bash
+set -euo pipefail
+
+SCRIPT_DIR="$(cd "$(dirname "$0")/.." && pwd)"
+PYTHON="$SCRIPT_DIR/.venv/bin/python"
+
+if [ $# -lt 1 ]; then
+    echo "Usage: grids-ingest <pdf-file> [--output-dir <dir>]"
+    exit 1
+fi
+
+PDF="$1"
+BASENAME="$(basename "${PDF%.*}")"
+# Sanitize for directory name
+SAFE_NAME="$(echo "$BASENAME" | tr ' ()' '_' | head -c 60)"
+OUTPUT_DIR="${2:-tmp/$SAFE_NAME}"
+
+echo "=== GRIDS Ingest Pipeline ==="
+echo "  PDF: $PDF"
+echo "  Output: $OUTPUT_DIR"
+echo ""
+
+# Step 1: Profile
+echo "--- Step 1: Profiling ---"
+PROFILE=$("$PYTHON" -m grids.pdf.profile "$PDF" --json)
+RECOMMENDATION=$(echo "$PROFILE" | "$PYTHON" -c "import sys,json; print(json.load(sys.stdin)['recommendation'])")
+mkdir -p "$OUTPUT_DIR"
+echo "$PROFILE" > "$OUTPUT_DIR/profile.json"
+echo "  Recommendation: $RECOMMENDATION"
+echo ""
+
+# Step 2: Text extraction (based on recommendation)
+echo "--- Step 2: Text Extraction ---"
+if [ "$RECOMMENDATION" = "ocr-required" ]; then
+    "$PYTHON" -m grids.pdf.ocr "$PDF" --output "$OUTPUT_DIR/text"
+elif [ "$RECOMMENDATION" = "mixed" ]; then
+    "$PYTHON" -m grids.pdf.extract "$PDF" --output "$OUTPUT_DIR/text"
+else
+    "$PYTHON" -m grids.pdf.extract "$PDF" --output "$OUTPUT_DIR/text" --no-ocr
+fi
+echo ""
+
+# Step 3: Structure
+echo "--- Step 3: Structure Extraction ---"
+"$PYTHON" -m grids.pdf.structure "$PDF" --text-dir "$OUTPUT_DIR/text" --output "$OUTPUT_DIR/structure.json"
+echo ""
+
+# Step 4: Chunking
+echo "--- Step 4: Semantic Chunking ---"
+if [ -f "$OUTPUT_DIR/text/full.md" ]; then
+    "$PYTHON" -m grids.pdf.chunk "$OUTPUT_DIR/text/full.md" \
+        --structure "$OUTPUT_DIR/structure.json" \
+        --output "$OUTPUT_DIR/chunks.jsonl" \
+        --source "$BASENAME"
+fi
+echo ""
+
+# Step 5: Figures
+echo "--- Step 5: Figure Extraction ---"
+"$PYTHON" -m grids.pdf.figures "$PDF" --output "$OUTPUT_DIR/figures"
+echo ""
+
+echo "=== Ingest Complete ==="
+echo "  Profile:    $OUTPUT_DIR/profile.json"
+echo "  Text:       $OUTPUT_DIR/text/"
+echo "  Structure:  $OUTPUT_DIR/structure.json"
+echo "  Chunks:     $OUTPUT_DIR/chunks.jsonl"
+echo "  Figures:    $OUTPUT_DIR/figures/"

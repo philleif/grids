@@ -1,0 +1,10 @@
+[workspace]
+resolver = "2"
+members = [
+    "apps/demo",
+    "apps/zine",
+    "apps/calling-cards/src-tauri",
+    "libs/layout",
+    "tui/viewer",
+    "tui/intake",
+]

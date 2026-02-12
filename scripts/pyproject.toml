@@ -1,0 +1,71 @@
+[project]
+name = "grids-scripts"
+version = "0.1.0"
+description = "Chained utility scripts for GRIDS PDF processing pipelines"
+requires-python = ">=3.12"
+dependencies = [
+    "pypdf>=4.0",
+    "pdfplumber>=0.11",
+    "pypdfium2>=4.0",
+    "pytesseract>=0.3",
+    "Pillow>=10.0",
+    "rich>=13.0",
+    "chromadb>=0.4",
+    "sentence-transformers>=2.0",
+    "langchain>=0.3",
+    "langchain-openai>=0.3",
+    "langchain-community>=0.4",
+    "langgraph>=0.2",
+    "ddgs>=9.0",
+    "pydantic>=2.0",
+    "pyyaml>=6.0",
+    "playwright>=1.40",
+    "reportlab>=4.0",
+    "img2pdf>=0.5",
+]
+
+[project.scripts]
+grids-pdf-profile = "grids.pdf.profile:main"
+grids-pdf-extract = "grids.pdf.extract:main"
+grids-pdf-ocr = "grids.pdf.ocr:main"
+grids-pdf-structure = "grids.pdf.structure:main"
+grids-pdf-chunk = "grids.pdf.chunk:main"
+grids-pdf-figures = "grids.pdf.figures:main"
+grids-pdf-render = "grids.pdf.render:main"
+grids-research = "grids.moodboard.research:main"
+grids-moodboard = "grids.moodboard.board:main"
+grids-index = "grids.knowledge.store:main"
+grids-query = "grids.knowledge.store:query_main"
+grids-session = "grids.orchestration.session:main"
+grids-domain-init = "grids.domain.cli:domain_init"
+grids-domain-validate = "grids.domain.cli:domain_validate"
+grids-domain-specify = "grids.domain.cli:domain_specify"
+grids-execute = "grids.execution.cli:execute_main"
+grids-cycle = "grids.execution.cli:run_full_cycle"
+grids-capture = "grids.visual.cli:capture_main"
+grids-critique = "grids.visual.cli:critique_main"
+grids-visual-loop = "grids.visual.cli:visual_loop_main"
+grids-book-find = "grids.book.finder:main"
+grids-calling-cards = "grids.apps.calling_cards:main"
+grids-typeset = "grids.typeset.cli:typeset_main"
+grids-typeset-gen = "grids.typeset.cli:generate_main"
+grids-gm = "grids.image.gm:main"
+grids-trace = "grids.image.trace:main"
+grids-svg = "grids.image.svg_tools:main"
+grids-idml = "grids.typeset.cli:idml_main"
+grids-print-pdf = "grids.typeset.impose:main"
+grids-seed = "grids.seed.reference:main"
+grids-chat-server = "grids.apps.chat_server:main"
+grids-extract-border = "grids.image.extract:main"
+grids-run = "grids.orchestration.run:main"
+grids-validate = "grids.orchestration.validate_cli:main"
+grids-report = "grids.analysis.cli:main"
+grids-eval = "grids.eval.cli:main"
+grids-scrape-substack = "grids.knowledge.scrape_substack:main"
+
+[build-system]
+requires = ["hatchling"]
+build-backend = "hatchling.build"
+
+[tool.hatch.build.targets.wheel]
+packages = ["src/grids"]

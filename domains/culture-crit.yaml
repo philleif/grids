@@ -1,0 +1,329 @@
+domain:
+  name: culture-crit
+  description: "Counterculture criticism and cultural intelligence -- zinemaking, independent music/literature/film/fashion/design/art, scene history across NYC/LA/Tokyo/Berlin/Chengdu/London, cultural deconstruction, trend forensics, and taste as a practiced discipline"
+
+sources:
+  pdfs:
+    # History / subcultural theory
+    - path: "REFERENCE/culture-crit/lipstick-traces.pdf"
+      collection: culture-crit-history
+      description: "Greil Marcus -- Lipstick Traces: A Secret History of the Twentieth Century"
+    - path: "REFERENCE/culture-crit/subculture-meaning-of-style.pdf"
+      collection: culture-crit-history
+      description: "Dick Hebdige -- Subculture: The Meaning of Style"
+    - path: "REFERENCE/culture-crit/retromania.pdf"
+      collection: culture-crit-history
+      description: "Simon Reynolds -- Retromania: Pop Culture's Addiction to Its Own Past"
+
+    # Zines
+    - path: "REFERENCE/culture-crit/notes-from-underground.pdf"
+      collection: culture-crit-zines
+      description: "Stephen Duncombe -- Notes from Underground: Zines and the Politics of Alternative Culture"
+    - path: "REFERENCE/culture-crit/fanzines.pdf"
+      collection: culture-crit-zines
+      description: "Teal Triggs -- Fanzines: The DIY Revolution"
+    - path: "REFERENCE/culture-crit/zines-vol1.pdf"
+      collection: culture-crit-zines
+      description: "V. Vale -- Zines! Vol 1 (RE/Search)"
+    - path: "REFERENCE/culture-crit/zines-vol2.pdf"
+      collection: culture-crit-zines
+      description: "V. Vale -- Zines! Vol 2 (RE/Search)"
+
+    # Cultural theory
+    - path: "REFERENCE/culture-crit/mythologies.pdf"
+      collection: culture-crit-theory
+      description: "Roland Barthes -- Mythologies"
+    - path: "REFERENCE/culture-crit/against-interpretation.pdf"
+      collection: culture-crit-theory
+      description: "Susan Sontag -- Against Interpretation and Other Essays"
+    - path: "REFERENCE/culture-crit/work-of-art-mechanical-reproduction.pdf"
+      collection: culture-crit-theory
+      description: "Walter Benjamin -- The Work of Art in the Age of Mechanical Reproduction"
+    - path: "REFERENCE/culture-crit/postmodernism-cultural-logic-late-capitalism.pdf"
+      collection: culture-crit-theory
+      description: "Fredric Jameson -- Postmodernism, or The Cultural Logic of Late Capitalism"
+
+    # Scene histories
+    - path: "REFERENCE/culture-crit/please-kill-me.pdf"
+      collection: culture-crit-scenes
+      description: "Legs McNeil & Gillian McCain -- Please Kill Me: The Uncensored Oral History of Punk"
+    - path: "REFERENCE/culture-crit/our-band-could-be-your-life.pdf"
+      collection: culture-crit-scenes
+      description: "Michael Azerrad -- Our Band Could Be Your Life: Scenes from the American Indie Underground 1981-1991"
+    - path: "REFERENCE/culture-crit/ocean-of-sound.pdf"
+      collection: culture-crit-scenes
+      description: "David Toop -- Ocean of Sound: Aether Talk, Ambient Sound and Imaginary Worlds"
+    - path: "REFERENCE/culture-crit/ametora.pdf"
+      collection: culture-crit-scenes
+      description: "W. David Marx -- Ametora: How Japan Saved American Style"
+
+    # Design crossover (Phaidon, Rizzoli, independents)
+    - path: "REFERENCE/culture-crit/no-more-rules.pdf"
+      collection: culture-crit-design
+      description: "Rick Poynor -- No More Rules: Graphic Design and Postmodernism"
+    - path: "REFERENCE/culture-crit/designed-by-peter-saville.pdf"
+      collection: culture-crit-design
+      description: "Emily King -- Designed by Peter Saville (Phaidon)"
+    - path: "REFERENCE/culture-crit/100-ideas-changed-graphic-design.pdf"
+      collection: culture-crit-design
+      description: "Steven Heller & Veronique Vienne -- 100 Ideas that Changed Graphic Design"
+
+    # Fashion (Taschen, Rizzoli)
+    - path: "REFERENCE/culture-crit/fashion-theory.pdf"
+      collection: culture-crit-fashion
+      description: "Valerie Steele -- Fashion Theory: Towards a Cultural History"
+    - path: "REFERENCE/culture-crit/id-wink.pdf"
+      collection: culture-crit-fashion
+      description: "Terry Jones -- i-D: Wink (Taschen)"
+    - path: "REFERENCE/culture-crit/fashion-kyoto-costume-institute.pdf"
+      collection: culture-crit-fashion
+      description: "Akiko Fukai -- Fashion: The Collection of the Kyoto Costume Institute (Taschen)"
+
+  web_research:
+    enabled: true
+    seed_queries:
+      # Zine history and culture
+      - "Factsheet Five zine review history Mike Gunderloy 1980s 1990s"
+      - "Cometbus zine Aaron Cometbus punk history Berkeley"
+      - "Punk Planet magazine history Chicago independent culture"
+      - "riot grrrl zines Bikini Kill Kathleen Hanna feminist punk"
+      - "mail art network Fluxus Ray Johnson correspondence art"
+      - "zine distro culture Microcosm Publishing last gasp"
+      - "RE/Search publications V. Vale industrial culture San Francisco"
+      - "Emigre magazine Rudy VanderLans Zuzana Licko graphic design typography"
+      - "Nest magazine Joseph Holtzman interiors magazine cult"
+      - "Visionaire magazine limited edition art fashion publishing"
+
+      # 90s-00s NYC scene
+      - "No Wave New York Cinema of Transgression Lydia Lunch DNA"
+      - "Williamsburg Brooklyn 1990s art scene pre-gentrification lofts"
+      - "285 Kent Avenue DIY venue Brooklyn noise music"
+      - "ABC No Rio Lower East Side punk hardcore art gallery"
+      - "Fort Thunder Providence Rhode Island noise art collective"
+      - "Printed Matter Inc artists books distribution New York"
+      - "Kim's Video St Marks Place East Village record store culture"
+      - "Anthology Film Archives Jonas Mekas avant-garde cinema NYC"
+      - "CBGB to Mercury Lounge to Cake Shop NYC venue lineage"
+      - "Paper magazine downtown NYC nightlife culture 1990s 2000s"
+
+      # 90s-00s LA scene
+      - "SST Records Black Flag Greg Ginn Hermosa Beach punk"
+      - "The Smell venue downtown LA DIY all-ages shows"
+      - "Low End Theory beat scene Flying Lotus Brainfeeder LA"
+      - "Stones Throw Records Madlib J Dilla Peanut Butter Wolf"
+      - "CalArts diaspora Los Angeles contemporary art influence"
+      - "Deathbomb Arc noise experimental music collective LA"
+      - "Giant Robot magazine Asian American pop culture Eric Nakamura"
+
+      # Tokyo scene
+      - "Harajuku street fashion history Takeshita Dori subcultures"
+      - "Shibuya-kei Pizzicato Five Cornelius Flipper's Guitar Tokyo"
+      - "FRUiTS magazine Shoichi Aoki Harajuku street style photography"
+      - "A Bathing Ape Bape NIGO Ura-Harajuku streetwear origins"
+      - "Comme des Garcons Rei Kawakubo Dover Street Market anti-fashion"
+      - "Yohji Yamamoto deconstructionist fashion Tokyo Paris"
+      - "Issey Miyake Pleats Please technology fashion innovation"
+      - "Yellow Magic Orchestra Hosono Sakamoto Takahashi technopop"
+      - "noise music Japan Merzbow Boredoms Hanatarash extreme"
+
+      # Berlin scene
+      - "Tresor club Berlin techno Dimitri Hegemann Detroit connection"
+      - "Basic Channel Moritz von Oswald Mark Ernestus dub techno Berlin"
+      - "Berghain Panorama Bar Berlin techno culture door policy"
+      - "Kreuzberg squat culture Berlin wall reunification artist spaces"
+      - "KW Institute for Contemporary Art Berlin Kunst-Werke"
+      - "Wax Trax Records Chicago industrial Ministry Front 242"
+      - "Einsturzende Neubauten Berlin industrial music Blixa Bargeld"
+
+      # London scene
+      - "punk to post-punk lineage Sex Pistols Wire Gang of Four London"
+      - "i-D magazine The Face style bible London youth culture 1980s"
+      - "Young British Artists YBAs Damien Hirst Tracey Emin Sensation"
+      - "Rough Trade Records shop Ladbroke Grove post-punk distribution"
+      - "Shoreditch pre-gentrification warehouse culture Old Street"
+      - "acid house rave culture Second Summer of Love 1988 London"
+      - "4AD Records Vaughan Oliver album art design Cocteau Twins"
+      - "Saatchi Gallery London contemporary art market influence"
+
+      # Chengdu and emerging scenes
+      - "Chengdu underground hip-hop scene Higher Brothers 88rising"
+      - "Caotangxi creative district Chengdu independent culture"
+      - "Nuart Gallery Chengdu contemporary art scene"
+      - "Chinese independent music scene douban Xiami underground"
+      - "Lagos Afrobeats scene cultural export Burna Boy Wizkid"
+      - "Mexico City Roma Condesa contemporary art gallery scene"
+      - "Sao Paulo graffiti street art Os Gemeos Nunca Vila Madalena"
+
+      # Independent publishing and literary magazines
+      - "n+1 literary magazine intellectual culture New York"
+      - "The Baffler magazine Thomas Frank cultural criticism"
+      - "McSweeney's Dave Eggers literary publishing San Francisco"
+      - "Granta magazine literary nonfiction British writing"
+      - "Purple magazine Olivier Zahm fashion art Paris"
+      - "Apartamento magazine interiors everyday life Barcelona"
+      - "Bidoun magazine Middle Eastern contemporary art culture"
+      - "Monocle magazine Tyler Brule global culture design"
+
+      # Design crossover -- record sleeves, posters, graphics
+      - "Peter Saville Factory Records album artwork Joy Division New Order"
+      - "Vaughan Oliver 4AD record sleeve design This Mortal Coil"
+      - "Barney Bubbles Stiff Records Hawkwind graphic design punk"
+      - "David Carson Ray Gun magazine grunge typography deconstructed"
+      - "Tibor Kalman Colors magazine Benetton graphic design activism"
+      - "Neville Brody The Face magazine typography London design"
+      - "Shepard Fairey Obey Giant Andre the Giant street art propaganda"
+      - "Swissted Mike Joyce punk posters international typographic style"
+
+      # Cultural theory -- Birmingham School, situationism, hauntology
+      - "Birmingham Centre for Contemporary Cultural Studies Stuart Hall"
+      - "situationism Guy Debord Society of the Spectacle derive detournement"
+      - "Jean Baudrillard simulacra simulation hyperreality"
+      - "Mark Fisher hauntology Capitalist Realism k-punk blog"
+      - "Theodor Adorno culture industry popular culture critique"
+      - "Walter Benjamin flaneur arcades project cultural criticism"
+      - "Susan Sontag camp sensibility notes on camp essay"
+      - "Raymond Williams culture is ordinary cultural materialism"
+    max_results_per_query: 10
+
+master:
+  name: culture-crit-master
+  description: "A deeply read culture critic who came up through the zine scene in the late 90s, writes for n+1, The Baffler, and Artforum, DJs rare 7-inches, and can trace the lineage of any contemporary aesthetic trend back through three decades of subcultural mutations. Has read every issue of Emigre, RE/Search, and Nest. Evaluates cultural output not just for quality but for authenticity, historical awareness, and whether it understands its own references."
+  knowledge_collections:
+    - culture-crit-history
+    - culture-crit-zines
+    - culture-crit-theory
+    - culture-crit-scenes
+
+sub_agents:
+  - name: zine-craft
+    aspect: "Zine production quality -- DIY aesthetics, layout, reproduction methods (xerox, risograph, screen print), distribution networks, the materiality and politics of self-publishing, cut-and-paste vs digital, edition sizes, trade culture"
+    concepts:
+      - xerox aesthetic
+      - risograph
+      - cut and paste
+      - hand lettering
+      - zine distro
+      - self-publishing
+      - mail order
+      - small edition
+      - DIY ethics
+      - materiality
+      - paper choice
+      - saddle stitch
+    strictness: 0.9
+
+  - name: scene-history
+    aspect: "Historical accuracy of subcultural references -- NYC (CBGB to No Wave to Williamsburg), LA (SST to Low End Theory), Tokyo (Harajuku, Shibuya-kei, Bape), Berlin (Tresor, Basic Channel, Berghain era), London (punk, rave, YBA), Chengdu (underground hip-hop, Caotangxi), and the connections between them"
+    concepts:
+      - No Wave
+      - Williamsburg
+      - SST Records
+      - Low End Theory
+      - Shibuya-kei
+      - Harajuku
+      - Tresor
+      - Berghain
+      - acid house
+      - YBA
+      - Higher Brothers
+      - Caotangxi
+      - scene chronology
+      - venue lineage
+      - gentrification displacement
+    strictness: 0.95
+
+  - name: literary-crit
+    aspect: "Independent literature and essay criticism -- small press quality, literary magazine standards (n+1, The Baffler, McSweeney's, Granta), essay form mastery, load-bearing argument construction, the difference between a take and a thesis"
+    concepts:
+      - n+1
+      - The Baffler
+      - McSweeney's
+      - Granta
+      - small press
+      - essay form
+      - thesis construction
+      - cultural criticism
+      - intellectual rigor
+      - close reading
+      - the take vs the thesis
+    strictness: 0.9
+
+  - name: cultural-deconstruction
+    aspect: "The ability to disassemble any contemporary cultural artifact into its constituent historical reference points -- trace the DNA of an aesthetic, a sound, a garment, a layout back through its influences; e.g. 'this is Emigre meets Dischord meets Muji meets Terrence Malick'; zero tolerance for unacknowledged derivation"
+    concepts:
+      - influence mapping
+      - reference tracing
+      - aesthetic DNA
+      - derivation
+      - homage vs theft
+      - pastiche
+      - bricolage
+      - genealogy
+      - citation
+      - cultural literacy
+    strictness: 0.95
+
+  - name: trend-forensics
+    aspect: "Trend identification and forecasting -- pattern recognition across scenes and decades, timing of cultural cycles (underground discovery, early adoption, mainstream dilution, nostalgic revival), micro-trend vs macro-shift, the 20-year cycle, spotting what's next by reading what's forgotten"
+    concepts:
+      - trend cycle
+      - underground to mainstream
+      - early adoption
+      - dilution
+      - nostalgic revival
+      - 20-year cycle
+      - micro-trend
+      - macro-shift
+      - forecasting
+      - cultural arbitrage
+    strictness: 0.85
+
+  - name: taste-calibration
+    aspect: "Overall taste level and authenticity detection -- can distinguish the genuine article from surface-level pastiche, detects when something truly gets it vs cosplays getting it, zero tolerance for uncredited appropriation, understands that taste is a practiced discipline not an innate quality"
+    concepts:
+      - authenticity
+      - pastiche detection
+      - appropriation
+      - credibility
+      - connoisseurship
+      - curation
+      - discernment
+      - posturing
+      - genuine vs performed
+      - taste as discipline
+    strictness: 0.95
+
+  - name: art-crit
+    aspect: "Contemporary art criticism -- gallery and museum literacy, market awareness without market worship, installation and conceptual and street art, the zine-to-gallery pipeline, artist-run spaces, alternative exhibition models, the tension between underground credibility and institutional recognition"
+    concepts:
+      - artist-run space
+      - alternative gallery
+      - installation art
+      - conceptual art
+      - street art
+      - zine to gallery pipeline
+      - art market
+      - institutional critique
+      - biennale circuit
+      - curatorial practice
+    strictness: 0.85
+
+  - name: essay-synthesis
+    aspect: "Idea synthesis and load-bearing essay construction -- the ability to connect disparate cultural threads into a cohesive thesis, the n+1 and Baffler essay form, arguments that reveal structural connections between seemingly unrelated phenomena, writing that changes how the reader sees something they thought they already understood"
+    concepts:
+      - thesis construction
+      - cultural synthesis
+      - structural argument
+      - load-bearing essay
+      - disparate connections
+      - reframing
+      - intellectual ambition
+      - close reading
+      - evidence marshaling
+      - the turn
+    strictness: 0.9
+
+rules:
+  max_iterations: 3
+  approval_threshold: 80
+  master_veto_threshold: 55

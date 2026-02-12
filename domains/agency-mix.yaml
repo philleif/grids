@@ -1,0 +1,148 @@
+domain:
+  name: agency-mix
+  description: "Creative agency roles and strategic thinking -- creative director, strategist, social media marketer, brand manager, art director, copywriter -- grounded in Ogilvy, Sullivan, and Ries/Trout"
+
+sources:
+  pdfs:
+    - path: "REFERENCE/agency/hey-whipple.pdf"
+      collection: agency-advertising
+      description: "Luke Sullivan -- Hey Whipple, Squeeze This (advertising craft)"
+    - path: "REFERENCE/agency/ogilvy-on-advertising.pdf"
+      collection: agency-advertising
+      description: "David Ogilvy -- Ogilvy on Advertising"
+    - path: "REFERENCE/agency/positioning.pdf"
+      collection: agency-strategy
+      description: "Al Ries & Jack Trout -- Positioning: The Battle for Your Mind"
+  web_research:
+    enabled: true
+    seed_queries:
+      # Creative director
+      - "creative direction process methodology campaign development"
+      - "creative director role concept development visual storytelling"
+      - "creative review process feedback giving critique"
+      - "campaign concepting big idea development techniques"
+      - "award-winning advertising creative analysis Cannes Lions"
+      # Strategist
+      - "brand strategy framework positioning differentiation"
+      - "creative brief writing template best practices"
+      - "audience research persona development segmentation"
+      - "competitive analysis framework category assessment"
+      - "brand positioning statement value proposition"
+      - "cultural strategy brand relevance semiotics"
+      # Social media marketer
+      - "social media strategy organic growth 2025"
+      - "platform-native content creation TikTok Instagram LinkedIn"
+      - "community management engagement tactics"
+      - "social media analytics metrics KPIs"
+      - "content calendar planning editorial schedule"
+      - "influencer marketing strategy collaboration"
+      - "social media advertising targeting optimization"
+      # Copywriter
+      - "copywriting frameworks AIDA PAS headline formulas"
+      - "body copy writing clarity persuasion"
+      - "David Ogilvy advertising copywriting principles"
+      - "tone of voice brand voice guidelines development"
+      - "UX writing microcopy principles"
+      # Art director
+      - "art direction principles visual storytelling advertising"
+      - "campaign visual identity photography direction"
+      - "layout composition advertising design"
+      - "art direction photography illustration selection"
+      # Brand manager
+      - "brand guidelines development asset governance"
+      - "brand consistency cross-channel management"
+      - "brand architecture master brand endorsed house of brands"
+      - "brand health tracking measurement metrics"
+      - "brand voice consistency enforcement"
+    max_results_per_query: 10
+
+master:
+  name: agency-master
+  description: "Senior creative director. Synthesizes strategy, creative execution, and audience understanding. Evaluates work through the lens of real agency roles -- does this solve a brief, move an audience, and meet professional standards?"
+  knowledge_collections:
+    - agency-advertising
+    - agency-strategy
+
+sub_agents:
+  - name: creative-director
+    aspect: "Creative concept and campaign vision -- big idea strength, originality, emotional resonance, executional range, does it solve the brief"
+    concepts:
+      - big idea
+      - concept territory
+      - creative leap
+      - emotional resonance
+      - campaign system
+      - executional range
+      - brief adherence
+      - originality
+    strictness: 0.9
+
+  - name: strategist
+    aspect: "Strategic foundation -- clear positioning, defined audience, measurable objectives, competitive differentiation, insight quality"
+    concepts:
+      - positioning
+      - target audience
+      - competitive analysis
+      - objectives
+      - differentiation
+      - value proposition
+      - insight
+      - creative brief
+    strictness: 0.9
+
+  - name: social-media-marketer
+    aspect: "Social media effectiveness -- platform-native content, community building, engagement quality, metrics awareness, content calendar thinking"
+    concepts:
+      - platform-native
+      - engagement
+      - community management
+      - content calendar
+      - hashtag strategy
+      - analytics
+      - trend awareness
+      - algorithm
+    strictness: 0.8
+
+  - name: copywriter
+    aspect: "Copy quality -- headline craft, body copy clarity, call to action, tone of voice consistency, persuasion, brevity"
+    concepts:
+      - headline
+      - body copy
+      - call to action
+      - tone of voice
+      - persuasion
+      - AIDA
+      - brevity
+      - wordplay
+    strictness: 0.85
+
+  - name: art-director
+    aspect: "Art direction quality -- visual concept, image selection/direction, typography in context, layout composition, brand visual consistency"
+    concepts:
+      - visual concept
+      - image selection
+      - photography direction
+      - typography
+      - composition
+      - brand consistency
+      - visual hierarchy
+      - mood
+    strictness: 0.85
+
+  - name: brand-manager
+    aspect: "Brand consistency and governance -- voice adherence, visual standards compliance, asset management, cross-channel consistency, brand architecture"
+    concepts:
+      - brand guidelines
+      - voice consistency
+      - visual standards
+      - asset governance
+      - cross-channel
+      - brand architecture
+      - brand health
+      - approval process
+    strictness: 0.85
+
+rules:
+  max_iterations: 3
+  approval_threshold: 75
+  master_veto_threshold: 50

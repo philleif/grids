@@ -1,0 +1,369 @@
+domain:
+  name: production-tech
+  description: "Universal production technology expertise -- evaluates whether any creative output can actually be made, delivered, or fabricated to professional standards. Covers creative software (Adobe suite, Figma, DAWs, 3D/CAD), digital media delivery specs (CTV, social, audio, print, web), physical fabrication (CNC, 3D printing, laser cutting, injection molding, large format), 3D/motion/VFX pipelines, web/frontend production, photography/capture workflows, packaging/environmental, asset management, and documentation/handoff"
+
+sources:
+  pdfs:
+    - path: "REFERENCE/production-tech/adobe-classroom-in-a-book-premiere.pdf"
+      collection: prodtech-video
+      description: "Adobe Premiere Pro Classroom in a Book"
+    - path: "REFERENCE/production-tech/adobe-classroom-in-a-book-photoshop.pdf"
+      collection: prodtech-design-tools
+      description: "Adobe Photoshop Classroom in a Book"
+    - path: "REFERENCE/production-tech/indesign-essentials.pdf"
+      collection: prodtech-print
+      description: "InDesign production essentials"
+    - path: "REFERENCE/production-tech/real-world-pdf.pdf"
+      collection: prodtech-print
+      description: "Real World PDF with Adobe Acrobat"
+    - path: "REFERENCE/production-tech/gdt-handbook.pdf"
+      collection: prodtech-fabrication
+      description: "GD&T (Geometric Dimensioning and Tolerancing) handbook"
+    - path: "REFERENCE/production-tech/machinery-handbook.pdf"
+      collection: prodtech-fabrication
+      description: "Machinery's Handbook (selected chapters -- tolerances, materials, surface finish)"
+  web_research:
+    enabled: true
+    seed_queries:
+      # Adobe Premiere / video editing
+      - "Adobe Premiere Pro 2025 keyboard shortcuts workflow efficiency"
+      - "Premiere Pro timeline editing techniques multicam proxy workflow"
+      - "Premiere Pro export settings H.264 ProRes delivery specifications"
+      - "DaVinci Resolve color grading workflow roundtrip Premiere"
+      - "video editing assembly cut rough cut fine cut locked picture stages"
+      # Adobe Audition / audio production
+      - "Adobe Audition podcast production workflow noise reduction mastering"
+      - "Audition multitrack mixing voiceover processing chain"
+      - "podcast production specs loudness LUFS RSS feed requirements"
+      - "audio deliverable specifications broadcast podcast streaming"
+      # Adobe InDesign / print production
+      - "InDesign print production preflight packaging export PDF/X"
+      - "InDesign master pages paragraph styles character styles workflow"
+      - "InDesign data merge variable data printing"
+      - "print production checklist bleed slug crop marks color management"
+      # Adobe Photoshop / image production
+      - "Photoshop non-destructive editing workflow smart objects adjustment layers"
+      - "Photoshop batch processing actions image optimization web"
+      - "image resolution DPI PPI print vs screen specifications"
+      - "Photoshop color management ICC profiles RGB CMYK conversion"
+      # Figma / digital design
+      - "Figma component architecture auto layout variants best practices 2025"
+      - "Figma design system organization file structure team libraries"
+      - "Figma developer handoff inspect mode design tokens export"
+      - "Figma prototyping interactions variables conditional logic"
+      - "Figma to production pipeline design engineering collaboration"
+      # Business software
+      - "Excel advanced formulas VLOOKUP INDEX MATCH pivot tables data analysis"
+      - "Google Sheets automation Apps Script data validation best practices"
+      - "spreadsheet data modeling creative production budgets tracking"
+      - "project management spreadsheets Gantt charts resource allocation"
+      # CTV / connected TV delivery specs
+      - "connected TV CTV ad specifications VAST VPAID delivery 2025"
+      - "OTT streaming video delivery specifications codec bitrate"
+      - "CTV creative specs Roku Fire TV Apple TV Samsung resolution"
+      - "programmatic CTV VAST 4.2 tag specifications"
+      # Social media delivery specs
+      - "Instagram Reels TikTok YouTube Shorts video specifications 2025"
+      - "social media image size specifications all platforms 2025"
+      - "social media video encoding specifications aspect ratios"
+      - "Meta ad specifications carousel video image requirements"
+      - "LinkedIn ad creative specifications document ads video"
+      # Audio delivery specs
+      - "podcast audio specifications Apple Spotify RSS MP3 AAC"
+      - "broadcast audio loudness specifications EBU R128 ATSC A/85"
+      - "streaming audio delivery specifications Dolby Atmos spatial"
+      - "audio mastering for different platforms loudness normalization"
+      # Asset management
+      - "digital asset management DAM best practices creative teams"
+      - "file naming conventions creative production assets"
+      - "version control creative assets folder structure organization"
+      - "media asset management metadata tagging taxonomy"
+      - "brand asset management template governance"
+      # Documentation and handoff
+      - "creative production handoff documentation best practices"
+      - "design developer handoff specifications Zeplin Figma"
+      - "video post-production handoff EDL XML AAF OMF specifications"
+      - "print production handoff checklist specifications vendor"
+      - "creative brief to deliverable documentation trail"
+      # Production workflows
+      - "video production workflow pre-production through delivery"
+      - "podcast production workflow recording editing publishing"
+      - "print production workflow design proofing press delivery"
+      - "digital design production workflow responsive multi-platform"
+      - "multi-channel campaign production workflow asset matrix"
+      # CAD / fabrication / manufacturing
+      - "CNC machining tolerances surface finish specifications aluminum steel"
+      - "3D printing design guidelines FDM SLA SLS minimum wall thickness overhang"
+      - "laser cutting kerf compensation material thickness guidelines"
+      - "sheet metal design rules bend radius K-factor minimum flange"
+      - "injection molding design guidelines draft angles wall thickness gate location"
+      - "GD&T geometric dimensioning tolerancing ASME Y14.5 basics"
+      - "STEP IGES STL file format comparison CAD exchange best practices"
+      - "CNC G-code CAM workflow Fusion 360 Mastercam toolpath generation"
+      - "material properties selection mechanical engineering design aluminum steel titanium plastics"
+      - "design for manufacturing DFM checklist common mistakes"
+      - "waterjet cutting design guidelines tolerances material compatibility"
+      - "die casting design guidelines draft angles parting lines"
+      - "PCB design for manufacturing IPC standards trace width spacing"
+      - "woodworking joinery CNC router design tolerances plywood MDF hardwood"
+      - "metal finishing anodizing powder coating plating specifications"
+      # 3D / motion / VFX pipeline
+      - "Blender production workflow scene organization best practices 2025"
+      - "Cinema 4D After Effects motion graphics pipeline workflow"
+      - "3D render pipeline optimization GPU CPU Arnold V-Ray Cycles"
+      - "UV unwrapping texture resolution PBR material workflow"
+      - "polygon budget optimization real-time vs offline rendering"
+      - "VFX compositing Nuke After Effects multi-pass render workflow"
+      - "3D file formats glTF USD FBX OBJ comparison interchange"
+      - "motion graphics deliverable specifications broadcast web social"
+      - "real-time 3D Unreal Engine architectural visualization workflow"
+      - "character rigging animation pipeline production standards"
+      # Web / frontend production
+      - "responsive web design breakpoints mobile-first production checklist"
+      - "image optimization WebP AVIF responsive images srcset sizes"
+      - "web performance budget Core Web Vitals LCP CLS INP optimization"
+      - "WCAG 2.2 accessibility checklist production compliance"
+      - "frontend build pipeline webpack Vite deployment CI/CD"
+      - "SEO technical requirements meta tags structured data sitemap"
+      - "cross-browser testing production QA checklist"
+      - "progressive web app PWA production requirements manifest service worker"
+      # Packaging / environmental / large format
+      - "packaging dieline construction structural design folding carton"
+      - "large format printing specifications resolution DPI vinyl mesh banner"
+      - "vehicle wrap design template specifications print production"
+      - "signage specifications environmental graphics wayfinding production"
+      - "exhibition booth design production specifications trade show"
+      - "Pantone spot color specification packaging print separation"
+      - "substrate selection paper board corrugated plastic production"
+      - "packaging prototyping CAD Artios structural design"
+      # Photography / capture
+      - "camera raw processing workflow Lightroom Capture One color calibration"
+      - "tethered shooting workflow commercial photography studio"
+      - "product photography lighting setup specifications ecommerce"
+      - "photo retouching standards beauty product editorial levels"
+      - "image licensing rights management metadata IPTC XMP"
+      - "panoramic 360 photography stitching delivery specifications"
+      - "drone aerial photography regulations deliverable specifications"
+    max_results_per_query: 10
+
+master:
+  name: prodtech-master
+  description: "Senior production technologist. Universal expertise in whether creative output can actually be made, delivered, or fabricated to professional standards. Evaluates digital deliverables, physical fabrication readiness, 3D/motion pipelines, web production, photography, packaging, and everything in between. The question is always: can this be built as specified, and will it survive contact with the real world?"
+  knowledge_collections:
+    - prodtech-video
+    - prodtech-design-tools
+    - prodtech-print
+    - prodtech-fabrication
+
+sub_agents:
+  - name: adobe-video-audio
+    aspect: "Premiere Pro and Audition proficiency -- timeline editing, multicam, proxy workflow, audio processing, export settings, codec selection, roundtrip with DaVinci Resolve and After Effects"
+    concepts:
+      - Premiere Pro
+      - Audition
+      - timeline editing
+      - multicam
+      - proxy workflow
+      - export settings
+      - codec
+      - ProRes
+      - H.264
+      - audio processing
+      - roundtrip
+      - Dynamic Link
+    strictness: 0.85
+
+  - name: adobe-design-print
+    aspect: "InDesign and Photoshop production -- master pages, paragraph styles, preflight, packaging, PDF/X export, non-destructive editing, color management, ICC profiles, image resolution"
+    concepts:
+      - InDesign
+      - Photoshop
+      - master pages
+      - paragraph styles
+      - preflight
+      - packaging
+      - PDF/X
+      - color management
+      - ICC profile
+      - resolution
+      - smart objects
+      - adjustment layers
+    strictness: 0.9
+
+  - name: figma-digital
+    aspect: "Figma and digital design production -- component architecture, auto layout, variants, design systems, team libraries, developer handoff, design tokens, prototyping, export specifications"
+    concepts:
+      - Figma
+      - components
+      - auto layout
+      - variants
+      - design system
+      - team library
+      - developer handoff
+      - design tokens
+      - prototyping
+      - inspect mode
+    strictness: 0.85
+
+  - name: delivery-specs
+    aspect: "Deliverable specifications across channels -- CTV/OTT specs (VAST, resolution, codec), social media specs (dimensions, formats, aspect ratios per platform), audio specs (LUFS, codec, sample rate), print specs (bleed, color space, resolution)"
+    concepts:
+      - CTV specifications
+      - VAST
+      - social media specs
+      - aspect ratios
+      - video codec
+      - audio LUFS
+      - print bleed
+      - color space
+      - resolution
+      - file format
+      - bitrate
+      - frame rate
+    strictness: 0.95
+
+  - name: fabrication-manufacturing
+    aspect: "Physical fabrication readiness -- CNC tolerances, 3D printing constraints (FDM/SLA/SLS wall thickness, overhangs, supports), laser cutting kerf, sheet metal bend radii, injection molding draft angles, waterjet, die casting, GD&T per ASME Y14.5, material selection, surface finish specs, DFM review"
+    concepts:
+      - CNC tolerances
+      - 3D printing
+      - FDM
+      - SLA
+      - SLS
+      - laser cutting
+      - kerf
+      - sheet metal
+      - bend radius
+      - injection molding
+      - draft angle
+      - GD&T
+      - ASME Y14.5
+      - wall thickness
+      - surface finish
+      - STEP
+      - STL
+      - DFM
+    strictness: 0.95
+
+  - name: 3d-motion-vfx
+    aspect: "3D, motion graphics, and VFX pipeline -- Blender, Cinema 4D, After Effects, render pipeline optimization, scene organization, UV/texture specs, polygon budgets, compositing workflow, file interchange (glTF, USD, FBX), real-time vs offline rendering, motion deliverable specs"
+    concepts:
+      - Blender
+      - Cinema 4D
+      - After Effects
+      - render pipeline
+      - UV mapping
+      - PBR materials
+      - polygon budget
+      - compositing
+      - multi-pass render
+      - glTF
+      - USD
+      - FBX
+      - real-time rendering
+      - motion graphics
+    strictness: 0.85
+
+  - name: web-frontend
+    aspect: "Web and frontend production readiness -- responsive breakpoints, image optimization (WebP/AVIF/srcset), performance budgets (Core Web Vitals), WCAG 2.2 accessibility, SEO technical requirements, cross-browser QA, build pipelines, PWA requirements"
+    concepts:
+      - responsive design
+      - image optimization
+      - WebP
+      - AVIF
+      - Core Web Vitals
+      - LCP
+      - CLS
+      - WCAG
+      - accessibility
+      - SEO
+      - cross-browser
+      - build pipeline
+      - PWA
+    strictness: 0.9
+
+  - name: packaging-environmental
+    aspect: "Packaging, large format, and environmental production -- dieline construction, substrate selection, Pantone spot colors, large format print specs (vinyl, mesh, banner), vehicle wraps, signage, exhibition/trade show specs, structural prototyping"
+    concepts:
+      - dieline
+      - folding carton
+      - substrate
+      - Pantone spot
+      - large format
+      - vinyl
+      - vehicle wrap
+      - signage
+      - wayfinding
+      - exhibition
+      - corrugated
+      - structural design
+    strictness: 0.9
+
+  - name: photography-capture
+    aspect: "Photography and image capture production -- raw processing workflow (Lightroom, Capture One), color calibration, tethered shooting, product/commercial lighting, retouching standards, image licensing/rights (IPTC/XMP metadata), 360/panoramic, drone specifications"
+    concepts:
+      - raw processing
+      - Lightroom
+      - Capture One
+      - color calibration
+      - tethered shooting
+      - product photography
+      - retouching
+      - IPTC
+      - XMP
+      - image licensing
+      - 360 photography
+      - drone
+    strictness: 0.85
+
+  - name: asset-management
+    aspect: "Asset organization and management -- DAM systems, file naming conventions, folder structure, version control for creative files, metadata tagging, template governance, archival"
+    concepts:
+      - DAM
+      - file naming
+      - folder structure
+      - version control
+      - metadata
+      - tagging
+      - taxonomy
+      - template governance
+      - archival
+      - backup
+    strictness: 0.85
+
+  - name: documentation-handoff
+    aspect: "Production documentation and handoff -- creative briefs to deliverable trails, design-to-dev handoff, video post-production handoff (EDL/XML/AAF/OMF), print vendor specs, fabrication drawings, revision tracking, approval workflows"
+    concepts:
+      - handoff documentation
+      - EDL
+      - XML
+      - AAF
+      - OMF
+      - vendor specifications
+      - fabrication drawings
+      - revision tracking
+      - approval workflow
+      - design specs
+      - style guide
+      - bill of materials
+    strictness: 0.9
+
+  - name: business-tools
+    aspect: "Business software for production -- Excel and Google Sheets for budgets, tracking, and data analysis, pivot tables, formulas, Apps Script automation, project timelines, resource allocation"
+    concepts:
+      - Excel
+      - Google Sheets
+      - pivot tables
+      - VLOOKUP
+      - formulas
+      - Apps Script
+      - budget tracking
+      - Gantt chart
+      - resource allocation
+      - data validation
+    strictness: 0.75
+
+rules:
+  max_iterations: 3
+  approval_threshold: 80
+  master_veto_threshold: 50

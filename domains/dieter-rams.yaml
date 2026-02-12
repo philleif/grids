@@ -1,0 +1,183 @@
+domain:
+  name: dieter-rams
+  description: "Design philosophy through the lens of Dieter Rams -- functionalism, restraint, the ten principles of good design, Braun/Vitsoe product language, systems thinking, and the ethics of less-but-better (Weniger, aber besser)"
+
+sources:
+  pdfs:
+    - path: "REFERENCE/dieter-rams/less-and-more.pdf"
+      collection: rams-core
+      description: "Klaus Klemp & Keiko Ueki-Polet -- Less and More: The Design Ethos of Dieter Rams"
+    - path: "REFERENCE/dieter-rams/as-little-design-as-possible.pdf"
+      collection: rams-core
+      description: "Sophie Lovell -- Dieter Rams: As Little Design as Possible"
+    - path: "REFERENCE/dieter-rams/weniger-aber-besser.pdf"
+      collection: rams-core
+      description: "Dieter Rams -- Weniger, aber besser (Less, but Better)"
+    - path: "REFERENCE/dieter-rams/braun-design-collection.pdf"
+      collection: rams-products
+      description: "Jo Klatt & Gunter Staeffler -- Braun+Design Collection: 50 Years of Design Innovation"
+    - path: "REFERENCE/dieter-rams/vitsoe-606-universal-shelving.pdf"
+      collection: rams-products
+      description: "Vitsoe 606 Universal Shelving System -- design documentation and history"
+    - path: "REFERENCE/dieter-rams/functionalism-in-design.pdf"
+      collection: rams-philosophy
+      description: "Selected writings on functionalism, Ulm School, and the HfG legacy"
+    - path: "REFERENCE/dieter-rams/objectified-transcript.pdf"
+      collection: rams-philosophy
+      description: "Gary Hustwit -- Objectified (2009) transcript and interview material"
+    - path: "REFERENCE/dieter-rams/rams-documentary-transcript.pdf"
+      collection: rams-philosophy
+      description: "Gary Hustwit -- Rams (2018) documentary transcript"
+
+  web_research:
+    enabled: true
+    seed_queries:
+      # Ten principles
+      - "Dieter Rams ten principles good design original text"
+      - "Dieter Rams gutes Design ist so wenig Design wie möglich"
+      - "Rams ten principles applied to digital product design 2025"
+      - "good design is innovative Rams principle analysis"
+      - "good design makes a product useful Rams functionalism"
+      - "good design is aesthetic Rams beauty utility"
+      - "good design makes a product understandable Rams clarity"
+      - "good design is unobtrusive Rams restraint"
+      - "good design is honest Rams integrity"
+      - "good design is long-lasting Rams durability"
+      - "good design is thorough down to the last detail Rams"
+      - "good design is environmentally friendly Rams sustainability"
+      - "good design is as little design as possible Rams minimalism"
+      # Braun product language
+      - "Braun design language Dieter Rams product history"
+      - "Braun SK 4 snow white coffin record player Rams Gugelot"
+      - "Braun T3 pocket radio design Dieter Rams"
+      - "Braun ET 66 calculator design Rams influence Apple"
+      - "Braun TP 1 radio phonograph combination Rams"
+      - "Braun Lectron modular electronics design system"
+      - "Braun Atelier hi-fi system design language Rams"
+      # Vitsoe
+      - "Vitsoe 606 Universal Shelving System design philosophy"
+      - "Vitsoe 620 chair Dieter Rams design"
+      - "Vitsoe long-life design manifesto sustainability"
+      # Ulm School / HfG influence
+      - "Hochschule für Gestaltung Ulm design methodology"
+      - "HfG Ulm Max Bill Tomás Maldonado systems approach design"
+      - "Ulm School functionalism vs Bauhaus decorativism"
+      - "Otl Aicher systematic design Ulm school influence Rams"
+      # Design philosophy and ethics
+      - "Rams design ethics consumerism critique less but better"
+      - "Dieter Rams sustainability environmental responsibility design"
+      - "design restraint reduction essentialism philosophy"
+      - "functionalism industrial design history Germany postwar"
+      - "Rams influence Apple Jony Ive product design language"
+      - "Rams critique of design trends maximalism decoration"
+      # Contemporaries and lineage
+      - "Hans Gugelot Dieter Rams collaboration Braun Ulm"
+      - "Fritz Eichler Braun design program culture"
+      - "Jony Ive Dieter Rams influence Apple design comparison"
+      - "Naoto Fukasawa Muji essential design Rams influence"
+      - "Jasper Morrison super normal design Rams lineage"
+    max_results_per_query: 10
+
+master:
+  name: dieter-rams-master
+  description: "Senior design critic embodying Rams's philosophy. Evaluates all design work through the lens of the ten principles, functionalism, and the ethic of Weniger, aber besser. Rejects ornament, excess, and dishonest design."
+  knowledge_collections:
+    - rams-core
+    - rams-products
+    - rams-philosophy
+
+sub_agents:
+  - name: ten-principles
+    aspect: "The ten principles of good design as a living evaluation framework -- applying each principle as a rigorous lens for critique, not a checklist but a way of seeing"
+    concepts:
+      - innovative
+      - useful
+      - aesthetic
+      - understandable
+      - unobtrusive
+      - honest
+      - long-lasting
+      - thorough
+      - environmentally friendly
+      - as little design as possible
+    strictness: 0.95
+
+  - name: product-language
+    aspect: "Braun and Vitsoe product language -- visual grammar, material honesty, systematic form vocabulary, the relationship between surface and function, color restraint, and the quiet authority of well-resolved objects"
+    concepts:
+      - form follows function
+      - material honesty
+      - color restraint
+      - systematic form
+      - visual grammar
+      - surface treatment
+      - radius consistency
+      - proportion
+      - tactile quality
+      - manufacturing integrity
+    strictness: 0.9
+
+  - name: reduction
+    aspect: "The discipline of reduction -- Weniger, aber besser as design method, removing the unnecessary until only the essential remains, the courage to leave things out"
+    concepts:
+      - essentialism
+      - subtraction
+      - negative space
+      - restraint
+      - simplicity
+      - clarity
+      - noise reduction
+      - information hierarchy
+      - functional minimalism
+      - deliberate omission
+    strictness: 0.95
+
+  - name: systems-thinking
+    aspect: "Design as a system -- modular thinking, product families, visual consistency across a range, the 606 as archetype of systematic design, interchangeability, and longevity through adaptability"
+    concepts:
+      - modularity
+      - product family
+      - visual consistency
+      - interchangeability
+      - scalability
+      - grid structure
+      - component logic
+      - systematic variation
+      - long-life design
+      - adaptability
+    strictness: 0.85
+
+  - name: ethics-and-responsibility
+    aspect: "Design ethics per Rams -- environmental responsibility, anti-consumerism, durability over disposability, honest communication, the designer's obligation to the future"
+    concepts:
+      - sustainability
+      - durability
+      - anti-obsolescence
+      - environmental impact
+      - honest design
+      - consumer responsibility
+      - material efficiency
+      - repair and reuse
+      - design for longevity
+      - cultural responsibility
+    strictness: 0.9
+
+  - name: historical-lineage
+    aspect: "The intellectual lineage -- Ulm School, HfG, Bauhaus tension, Hans Gugelot, Fritz Eichler, and the thread running through to Ive, Fukasawa, Morrison, and contemporary essentialism"
+    concepts:
+      - Ulm School
+      - HfG
+      - Bauhaus
+      - Hans Gugelot
+      - Fritz Eichler
+      - Jony Ive
+      - Naoto Fukasawa
+      - Jasper Morrison
+      - super normal
+      - postwar German design
+    strictness: 0.8
+
+rules:
+  max_iterations: 3
+  approval_threshold: 80
+  master_veto_threshold: 55

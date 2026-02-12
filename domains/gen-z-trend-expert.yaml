@@ -1,0 +1,128 @@
+domain:
+  name: gen-z-trend-expert
+  description: "Gen Z cultural trend analysis and youth marketing expertise -- internet culture, social media behavior, micro-trends, brand voice, meme fluency, platform dynamics. Grounded in After School (Casey Lewis) and Link in Bio / Milk Karten (Rachel Karten) newsletters."
+
+sources:
+  markdown_files:
+    - glob: "REFERENCE/substacks/gen-z-trends/*.md"
+      collection: gen-z-trends
+      description: "After School (Casey Lewis) + Link in Bio / Milk Karten (Rachel Karten) -- Gen Z trend reports and social media marketing analysis"
+  web_research:
+    enabled: true
+    seed_queries:
+      # Gen Z behavior and culture
+      - "gen z trends 2025 2026 youth culture internet behavior"
+      - "gen z dating trends apps relationships situationships"
+      - "gen z social media habits TikTok Instagram BeReal"
+      - "gen z consumer behavior spending patterns authenticity"
+      - "gen z slang language internet culture memes 2025 2026"
+      # Social media and platform dynamics
+      - "TikTok trends algorithm culture short-form video"
+      - "Instagram Reels vs TikTok content strategy brands"
+      - "social media fatigue digital detox performative offlineness"
+      - "brand social media voice gen z authenticity cringe"
+      - "viral marketing gen z organic growth community"
+      # Youth culture and identity
+      - "gen z identity aesthetics -core microtrends"
+      - "gen z mental health wellness culture nervous system"
+      - "gen z nostalgia Y2K millennial culture cycle"
+      - "gen z loneliness third places community IRL"
+      - "gen z rejection of hustle culture soft life quiet luxury"
+      # Dating and relationships (gen z specific)
+      - "gen z dating culture hinge bumble app fatigue"
+      - "situationship talking stage gen z relationship norms"
+      - "gen z vulnerability emotional literacy relationships"
+      - "gen z community dating IRL events speed dating revival"
+      - "parasocial relationships gen z influencer culture dating"
+    max_results_per_query: 8
+
+master:
+  name: gen-z-trend-master
+  description: >
+    Senior Gen Z cultural analyst and trend forecaster. Fluent in internet
+    culture, meme cycles, platform dynamics, and youth consumer behavior.
+    Draws on After School and Link in Bio newsletters for grounded trend
+    analysis rather than surface-level "kids these days" takes. Understands
+    that trends are symptoms of deeper cultural shifts -- loneliness, identity
+    formation, algorithmic influence, economic precarity. Never condescending
+    about youth culture; treats micro-trends as legitimate cultural artifacts
+    worth analyzing. Can translate between "brand speak" and how actual young
+    people talk and behave online.
+  knowledge_collections:
+    - gen-z-trends
+
+sub_agents:
+  - name: cultural-signal
+    aspect: "Cultural signal detection -- does the work accurately identify and interpret real Gen Z cultural signals? Are the trends cited current and correctly understood, not outdated stereotypes? Does it distinguish signal from noise?"
+    concepts:
+      - micro-trends
+      - cultural signal
+      - trend cycle
+      - meme literacy
+      - platform migration
+      - aesthetic movements
+      - subculture
+      - normcore
+      - internet culture
+    strictness: 0.9
+
+  - name: platform-fluency
+    aspect: "Platform and social media fluency -- does the work demonstrate real understanding of how TikTok, Instagram, BeReal, and emerging platforms actually work? Does it understand algorithmic behavior, content formats, and platform-native communication styles?"
+    concepts:
+      - TikTok algorithm
+      - Instagram Reels
+      - content formats
+      - short-form video
+      - carousel strategy
+      - platform voice
+      - social SEO
+      - creator economy
+      - brand social
+    strictness: 0.85
+
+  - name: authenticity-radar
+    aspect: "Authenticity and cringe detection -- would actual Gen Z users find this authentic or cringe? Does it avoid corporate youth-washing, fellow-kids energy, or performative trendiness? Is the tone earned, not borrowed?"
+    concepts:
+      - authenticity
+      - cringe
+      - corporate pandering
+      - fellow kids
+      - brand voice
+      - genuine connection
+      - try-hard
+      - relatable
+      - unhinged marketing
+    strictness: 0.9
+
+  - name: behavioral-insight
+    aspect: "Behavioral and psychological insight -- does the work understand the 'why' behind Gen Z behavior, not just the 'what'? Does it connect trends to underlying anxieties, desires, and generational context (economic precarity, climate anxiety, digital natives)?"
+    concepts:
+      - generational psychology
+      - digital native behavior
+      - economic precarity
+      - loneliness epidemic
+      - identity formation
+      - parasocial relationships
+      - attention economy
+      - algorithm influence
+      - community seeking
+    strictness: 0.85
+
+  - name: dating-relevance
+    aspect: "Dating and relationship relevance -- does the work connect Gen Z cultural trends to dating behavior, relationship formation, and social connection? Does it understand how platform culture shapes how young people meet, flirt, and partner?"
+    concepts:
+      - dating app fatigue
+      - situationship
+      - talking stage
+      - IRL dating revival
+      - community dating
+      - vulnerability
+      - emotional literacy
+      - third places
+      - social deskilling
+    strictness: 0.8
+
+rules:
+  max_iterations: 3
+  approval_threshold: 75
+  master_veto_threshold: 50

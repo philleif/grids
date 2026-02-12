@@ -1,0 +1,170 @@
+domain:
+  name: editorial
+  description: "Deep editorial expertise -- research, idea generation, short-form and longform writing, structured research, Chicago Manual of Style, essay and narrative structure, rhetoric and argumentation"
+
+sources:
+  pdfs:
+    - path: "REFERENCE/editorial/chicago-manual-of-style.pdf"
+      collection: editorial-style
+      description: "The Chicago Manual of Style (selected chapters)"
+    - path: "REFERENCE/editorial/elements-of-style.pdf"
+      collection: editorial-style
+      description: "Strunk & White -- The Elements of Style"
+    - path: "REFERENCE/editorial/on-writing-well.pdf"
+      collection: editorial-craft
+      description: "William Zinsser -- On Writing Well"
+    - path: "REFERENCE/editorial/bird-by-bird.pdf"
+      collection: editorial-craft
+      description: "Anne Lamott -- Bird by Bird"
+    - path: "REFERENCE/editorial/rhetoric-aristotle.pdf"
+      collection: editorial-rhetoric
+      description: "Aristotle -- Rhetoric (W.R. Roberts translation)"
+  web_research:
+    enabled: true
+    seed_queries:
+      # Research methods
+      - "research methodology for writers systematic review techniques"
+      - "fact-checking methodology journalistic standards 2025"
+      - "primary source evaluation historiography methods"
+      - "literature review systematic synthesis academic writing"
+      - "investigative journalism research techniques FOIA"
+      # Idea generation
+      - "brainstorming techniques for writers angle finding"
+      - "thesis development argumentation frameworks"
+      - "creative nonfiction idea generation prompts methods"
+      - "editorial pitch writing angle development magazine"
+      # Short-form writing
+      - "blog post structure hooks engagement best practices"
+      - "opinion essay op-ed structure persuasion"
+      - "concise writing techniques brevity word economy"
+      - "short form journalism inverted pyramid structure"
+      # Longform writing
+      - "longform journalism structure pacing narrative arc"
+      - "book chapter structure sustained argument development"
+      - "feature writing immersive journalism techniques"
+      - "essay forms personal essay lyric essay hermit crab"
+      # Structured research
+      - "annotated bibliography construction methods"
+      - "systematic literature review PRISMA methodology"
+      - "research synthesis meta-analysis for writers"
+      - "evidence hierarchy critical appraisal"
+      # Chicago Manual of Style
+      - "Chicago Manual of Style 17th edition key rules"
+      - "Chicago notes-bibliography citation format examples"
+      - "Chicago author-date citation system"
+      - "manuscript preparation Chicago style formatting"
+      # Essay and narrative structure
+      - "essay structure classical rhetoric five-paragraph alternatives"
+      - "narrative nonfiction scene construction techniques"
+      - "rhetoric persuasion ethos pathos logos"
+      - "editing workflow professional copyediting stages"
+      - "creative nonfiction personal essay braided essay structure"
+      - "pacing rhythm in prose sentence variety"
+    max_results_per_query: 10
+
+master:
+  name: editorial-master
+  description: "Senior editorial expert. Synthesizes across research methodology, writing craft, style standards, argumentation, and narrative structure. Enforces Chicago Manual of Style as the house standard."
+  knowledge_collections:
+    - editorial-style
+    - editorial-craft
+    - editorial-rhetoric
+
+sub_agents:
+  - name: research-rigor
+    aspect: "Quality of research -- sourcing, citation accuracy, fact-checking, intellectual honesty, proper attribution, source evaluation"
+    concepts:
+      - citation
+      - fact-checking
+      - source evaluation
+      - attribution
+      - bibliography
+      - primary sources
+      - intellectual honesty
+      - evidence hierarchy
+    strictness: 0.95
+
+  - name: idea-generation
+    aspect: "Strength of the central idea -- thesis clarity, angle originality, relevance, scope appropriateness, question framing"
+    concepts:
+      - thesis statement
+      - angle
+      - originality
+      - relevance
+      - scope
+      - question framing
+      - so-what test
+      - nut graf
+    strictness: 0.85
+
+  - name: short-form
+    aspect: "Short-form writing quality -- hooks, conciseness, punch, paragraph economy, scanability, strong openings and closings"
+    concepts:
+      - hook
+      - lede
+      - conciseness
+      - word economy
+      - scanability
+      - inverted pyramid
+      - kicker
+      - brevity
+    strictness: 0.85
+
+  - name: longform
+    aspect: "Longform writing quality -- sustained argument, pacing, section architecture, reader endurance, depth without bloat"
+    concepts:
+      - pacing
+      - section structure
+      - sustained argument
+      - depth
+      - transitions
+      - reader endurance
+      - chapter architecture
+      - throughline
+    strictness: 0.9
+
+  - name: structured-research
+    aspect: "Systematic research quality -- methodology rigor, synthesis, literature review, evidence weighing, reproducibility of research process"
+    concepts:
+      - systematic review
+      - literature review
+      - synthesis
+      - methodology
+      - evidence weighing
+      - annotated bibliography
+      - research protocol
+    strictness: 0.9
+
+  - name: chicago-style
+    aspect: "Chicago Manual of Style compliance -- citation formatting, punctuation conventions, capitalization, numbers, abbreviations, manuscript formatting"
+    concepts:
+      - Chicago style
+      - notes-bibliography
+      - author-date
+      - punctuation
+      - capitalization
+      - serial comma
+      - em dash
+      - en dash
+      - manuscript format
+    strictness: 0.95
+
+  - name: narrative-structure
+    aspect: "Essay and narrative architecture -- scene construction, pacing, showing vs telling, emotional arc, rhetorical structure, transitions, opening/closing craft"
+    concepts:
+      - scene setting
+      - showing not telling
+      - anecdote
+      - emotional arc
+      - rhetorical structure
+      - ethos pathos logos
+      - narrative throughline
+      - opening
+      - closing
+      - transitions
+    strictness: 0.85
+
+rules:
+  max_iterations: 3
+  approval_threshold: 80
+  master_veto_threshold: 55

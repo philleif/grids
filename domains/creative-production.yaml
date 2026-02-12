@@ -1,0 +1,148 @@
+domain:
+  name: creative-production
+  description: "How actual people make things -- software development, film production, music production, creative roles and responsibilities, creative processes, workflow design, and production pipelines"
+
+sources:
+  pdfs:
+    - path: "REFERENCE/creative-production/mythical-man-month.pdf"
+      collection: production-software
+      description: "Frederick Brooks -- The Mythical Man-Month"
+    - path: "REFERENCE/creative-production/creative-habit.pdf"
+      collection: production-process
+      description: "Twyla Tharp -- The Creative Habit"
+    - path: "REFERENCE/creative-production/steal-like-artist.pdf"
+      collection: production-process
+      description: "Austin Kleon -- Steal Like an Artist"
+  web_research:
+    enabled: true
+    seed_queries:
+      # Software production
+      - "software development workflow best practices 2025"
+      - "version control Git branching strategies monorepo"
+      - "CI/CD pipeline design deployment strategies"
+      - "developer toolchain optimization build systems"
+      - "code review best practices pair programming"
+      - "technical debt management refactoring strategies"
+      # Creative roles
+      - "creative director responsibilities workflow"
+      - "film producer role pre-production planning"
+      - "editor role film music publishing workflow"
+      - "art director vs designer responsibilities"
+      - "music producer role arrangement composition"
+      - "creative team structure agency studio"
+      # Creative process
+      - "creative process stages ideation prototyping iteration"
+      - "design thinking IDEO methodology"
+      - "brainstorming techniques creative professionals"
+      - "critique feedback methods design review"
+      - "iteration fidelity levels sketch wireframe prototype"
+      - "maker schedule vs manager schedule Paul Graham"
+      # Film production
+      - "film pre-production workflow breakdown sheets"
+      - "film production pipeline camera department workflow"
+      - "post-production workflow editing color grading VFX"
+      - "documentary filmmaking production process"
+      - "video production deliverables formats specifications"
+      # Music production
+      - "music production workflow DAW arrangement mixing mastering"
+      - "recording studio session workflow signal chain"
+      - "mixing techniques levels EQ compression"
+      - "mastering workflow loudness standards LUFS"
+      - "music production collaboration remote workflow"
+      # Craft quality
+      - "professional finish standards creative deliverables"
+      - "quality control creative production checklist"
+      - "creative brief to deliverable workflow"
+      - "version control for creative assets design files"
+    max_results_per_query: 10
+
+master:
+  name: production-master
+  description: "Senior creative production expert. Understands how professionals across disciplines actually make things -- from ideation through delivery. Evaluates workflow quality, role clarity, and craft standards."
+  knowledge_collections:
+    - production-software
+    - production-process
+
+sub_agents:
+  - name: software-production
+    aspect: "Software development workflow -- version control, build systems, CI/CD, toolchain selection, dependency management, deployment"
+    concepts:
+      - version control
+      - Git workflow
+      - CI/CD
+      - build systems
+      - dependency management
+      - deployment
+      - code review
+      - testing pipeline
+    strictness: 0.85
+
+  - name: creative-roles
+    aspect: "Role clarity and responsibility -- who does what, proper handoffs between roles, appropriate authority, credit and attribution"
+    concepts:
+      - creative director
+      - producer
+      - editor
+      - art director
+      - designer
+      - developer
+      - role boundaries
+      - attribution
+    strictness: 0.8
+
+  - name: creative-process
+    aspect: "Process quality -- ideation methods, appropriate iteration, critique structure, fidelity progression, avoiding premature polish"
+    concepts:
+      - ideation
+      - brainstorming
+      - iteration
+      - critique
+      - fidelity levels
+      - prototyping
+      - design thinking
+      - diverge converge
+    strictness: 0.85
+
+  - name: film-production
+    aspect: "Film/video production pipeline -- pre-production planning, production workflow, post-production chain, deliverable specifications"
+    concepts:
+      - pre-production
+      - breakdown sheets
+      - shot list
+      - production schedule
+      - editing workflow
+      - color grading
+      - sound design
+      - deliverables
+    strictness: 0.8
+
+  - name: music-production
+    aspect: "Music production workflow -- recording, arrangement, mixing, mastering, DAW proficiency, signal chain, loudness standards"
+    concepts:
+      - DAW
+      - arrangement
+      - recording
+      - mixing
+      - mastering
+      - signal chain
+      - EQ compression
+      - LUFS
+      - stem delivery
+    strictness: 0.8
+
+  - name: craft-quality
+    aspect: "Craft quality of deliverables -- attention to detail, professional finish, appropriate tooling for the medium, polish level"
+    concepts:
+      - craft
+      - finish
+      - polish
+      - attention to detail
+      - professional standard
+      - medium-appropriate
+      - quality control
+    strictness: 0.85
+
+rules:
+  max_iterations: 3
+  approval_threshold: 75
+  master_veto_threshold: 50

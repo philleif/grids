@@ -1,0 +1,177 @@
+domain:
+  name: design
+  description: "Comprehensive design expertise -- interactive, print, graphic, typography, color theory, and design technology (LaTeX, SVG, CSS, PostScript) -- grounded in Norman, Bringhurst, Lupton, Bierut, Mueller-Brockmann, NASA, and Albers"
+
+sources:
+  pdfs:
+    - path: "REFERENCE/design/the-design-of-everyday-things.pdf"
+      collection: design-foundations
+      description: "Don Norman -- The Design of Everyday Things"
+    - path: "REFERENCE/design/Mueller-Brockmann_Josef_Grid_Systems_in_Graphic_Design_Raster_Systeme_fuer_die_Visuele_Gestaltung_English_German_no_OCR (2).pdf"
+      collection: design-foundations
+      description: "Josef Mueller-Brockmann -- Grid Systems in Graphic Design"
+    - path: "REFERENCE/design/elements-of-typographic-style.pdf"
+      collection: design-typography
+      description: "Robert Bringhurst -- The Elements of Typographic Style"
+    - path: "REFERENCE/design/thinking-with-type.pdf"
+      collection: design-typography
+      description: "Ellen Lupton -- Thinking with Type"
+    - path: "REFERENCE/design/nasa-graphics-standards.pdf"
+      collection: design-visual
+      description: "NASA Graphics Standards Manual (1976)"
+    - path: "REFERENCE/design/79-short-essays-on-design.pdf"
+      collection: design-visual
+      description: "Michael Bierut -- 79 Short Essays on Design"
+    - path: "REFERENCE/design/interaction-of-color.pdf"
+      collection: design-color
+      description: "Josef Albers -- Interaction of Color"
+  web_research:
+    enabled: true
+    seed_queries:
+      # Interactive design
+      - "interaction design principles patterns 2025"
+      - "responsive design breakpoints fluid grids best practices"
+      - "UI animation motion design principles Material Design"
+      - "form design usability patterns accessibility"
+      - "mobile-first design progressive enhancement"
+      # Print design
+      - "print design CMYK color separation prepress"
+      - "bleed trim marks imposition layout for print"
+      - "paper stock selection weight texture print design"
+      - "letterpress risograph screen printing design considerations"
+      - "editorial print layout magazine design grid systems"
+      # Graphic design
+      - "Wucius Wong Principles of Two-Dimensional Design key concepts"
+      - "visual identity systems logo design brand marks"
+      - "poster design composition principles"
+      - "information hierarchy visual weight layout composition"
+      # Typography
+      - "Robert Bringhurst typographic style principles"
+      - "opentype features variable fonts web typography 2025"
+      - "Paul McNeil Visual History of Type classification"
+      - "Stephen Coles Anatomy of Type"
+      - "type pairing serif sans-serif classification"
+      # Color
+      - "Josef Albers Interaction of Color key principles simultaneous contrast"
+      - "color theory complementary analogous triadic schemes"
+      - "color systems Pantone NCS Munsell RAL"
+      - "color accessibility WCAG contrast ratios"
+      - "color psychology perception cultural associations"
+      # Design technology
+      - "SVG specification best practices optimization"
+      - "LaTeX document design typography packages"
+      - "CSS grid flexbox layout techniques 2025"
+      - "PostScript PDF specification design automation"
+      - "design tokens systematic design technology"
+      - "Figma to code design systems automation"
+    max_results_per_query: 10
+
+master:
+  name: design-master
+  description: "Senior design expert. Synthesizes across interactive design, print production, graphic design, typography, color theory, and design technology."
+  knowledge_collections:
+    - design-foundations
+    - design-typography
+    - design-visual
+    - design-color
+
+sub_agents:
+  - name: interactive-design
+    aspect: "Screen-based and interactive design -- responsive layouts, interaction patterns, UI states, animation, accessibility, progressive enhancement"
+    concepts:
+      - responsive design
+      - interaction patterns
+      - UI states
+      - hover focus active
+      - motion design
+      - progressive enhancement
+      - touch targets
+      - accessibility
+      - WCAG
+      - form design
+    strictness: 0.85
+
+  - name: print-design
+    aspect: "Print production design -- bleeds, CMYK, spot colors, paper stock, imposition, press-ready files, binding, finishing"
+    concepts:
+      - CMYK
+      - spot color
+      - bleed
+      - trim marks
+      - imposition
+      - paper stock
+      - binding
+      - die cut
+      - letterpress
+      - screen printing
+      - prepress
+    strictness: 0.9
+
+  - name: graphic-design
+    aspect: "Visual composition, layout, identity systems, visual hierarchy, figure-ground, balance, rhythm -- per Mueller-Brockmann and Bierut"
+    concepts:
+      - composition
+      - visual hierarchy
+      - figure-ground
+      - balance
+      - rhythm
+      - repetition
+      - contrast
+      - proximity
+      - alignment
+      - grid structure
+      - visual identity
+      - logo systems
+    strictness: 0.85
+
+  - name: typography
+    aspect: "Typographic correctness, hierarchy, readability, type selection, spacing, and OpenType features -- per Bringhurst and Lupton"
+    concepts:
+      - typographic hierarchy
+      - type pairing
+      - readability
+      - grid systems
+      - kerning
+      - tracking
+      - leading
+      - baseline grid
+      - opentype features
+      - variable fonts
+      - type classification
+    strictness: 0.9
+
+  - name: color
+    aspect: "Color theory, palette construction, color systems, simultaneous contrast, accessibility, and cultural context -- per Albers"
+    concepts:
+      - simultaneous contrast
+      - color relativity
+      - complementary colors
+      - analogous colors
+      - color temperature
+      - saturation
+      - value
+      - color harmony
+      - Pantone
+      - color accessibility
+      - contrast ratio
+    strictness: 0.85
+
+  - name: design-tech
+    aspect: "Technical correctness of design output -- valid SVG, proper LaTeX, clean CSS, correct PostScript/PDF, design tokens, automation"
+    concepts:
+      - SVG specification
+      - LaTeX typesetting
+      - CSS layout
+      - PostScript
+      - PDF structure
+      - design tokens
+      - code generation
+      - render fidelity
+      - cross-platform
+      - optimization
+    strictness: 0.9
+
+rules:
+  max_iterations: 3
+  approval_threshold: 75
+  master_veto_threshold: 50

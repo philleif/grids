@@ -1,0 +1,126 @@
+domain:
+  name: dating-advice
+  description: "Relationship and dating advice expertise -- emotional intelligence, vulnerability coaching, attachment patterns, modern dating dynamics, advice column craft. Grounded in Heather Havrilesky's Ask Polly column (The Cut + Substack)."
+
+sources:
+  markdown_files:
+    - glob: "REFERENCE/substacks/ask-polly/*.md"
+      collection: dating-advice-polly
+      description: "Heather Havrilesky -- Ask Polly advice columns (The Cut + Substack)"
+  web_research:
+    enabled: true
+    seed_queries:
+      # Modern dating dynamics
+      - "modern dating advice healthy relationships 2025 2026"
+      - "dating app fatigue intentional dating alternatives"
+      - "dating advice for millennials gen-z vulnerability authenticity"
+      - "advice column craft writing personal advice essays"
+      # Attachment and emotional patterns
+      - "attachment theory dating relationships avoidant anxious secure"
+      - "emotional availability dating vulnerability courage"
+      - "people pleasing in relationships boundaries self-worth"
+      - "fear of rejection dating putting yourself out there"
+      # Relationship advice craft
+      - "how to give good dating advice empathy directness"
+      - "advice column history agony aunt tradition ask polly dear sugar"
+      - "Heather Havrilesky Ask Polly advice style radical honesty"
+      - "Cheryl Strayed Dear Sugar advice column warmth toughness"
+      # Self-knowledge and dating
+      - "knowing what you want in a partner self-awareness dating"
+      - "dating after heartbreak rebuilding trust openness"
+      - "loneliness singles community belonging"
+      - "self-acceptance dating imperfection vulnerability Brene Brown"
+      # Community and connection
+      - "community-based dating alternatives to apps"
+      - "IRL dating events singles community building"
+      - "DIY dating culture zine personal ads analog"
+      - "anti-algorithm dating human connection first"
+    max_results_per_query: 8
+
+master:
+  name: dating-advice-master
+  description: >
+    Senior dating and relationship advice expert. Channels the Ask Polly voice:
+    radically honest, emotionally precise, warm but never coddling. Believes
+    people deserve to hear the hard truth wrapped in genuine care. Draws on
+    attachment theory, emotional intelligence, and lived experience. Anti-platitude --
+    hates generic advice like "just put yourself out there" and insists on specificity.
+    The goal is always to help someone see themselves more clearly so they can
+    show up more fully for love and connection.
+  knowledge_collections:
+    - dating-advice-polly
+
+sub_agents:
+  - name: emotional-honesty
+    aspect: "Emotional honesty and vulnerability -- does the advice push toward genuine self-examination? Does it avoid platitudes and surface-level reassurance? Does it name the real feelings underneath?"
+    concepts:
+      - vulnerability
+      - emotional honesty
+      - self-examination
+      - defensiveness
+      - avoidance
+      - radical acceptance
+      - shame
+      - self-worth
+      - authenticity
+    strictness: 0.9
+
+  - name: attachment-patterns
+    aspect: "Attachment and relational patterns -- does the advice identify anxious, avoidant, or disorganized patterns? Does it help the reader understand their default wiring and how to work with it?"
+    concepts:
+      - attachment theory
+      - anxious attachment
+      - avoidant attachment
+      - secure base
+      - codependency
+      - boundaries
+      - enmeshment
+      - independence vs intimacy
+    strictness: 0.85
+
+  - name: voice-and-tone
+    aspect: "Advice column voice quality -- is the tone warm but direct? Does it read like a smart friend who genuinely cares, not a therapist or a corporation? Is it specific and vivid rather than generic?"
+    concepts:
+      - warmth
+      - directness
+      - specificity
+      - wit
+      - irreverence
+      - empathy
+      - anti-platitude
+      - conversational register
+      - tough love
+    strictness: 0.85
+
+  - name: actionability
+    aspect: "Actionable insight -- does the advice give the reader something concrete to do or think differently about? Not just 'be yourself' but specific reframes, practices, or shifts in perspective?"
+    concepts:
+      - concrete advice
+      - reframing
+      - perspective shift
+      - behavioral change
+      - practice
+      - habit
+      - journaling prompt
+      - conversation starter
+    strictness: 0.8
+
+  - name: dating-dynamics
+    aspect: "Modern dating awareness -- does the advice understand app culture, dating fatigue, the loneliness epidemic, parasocial relationships, situationships? Is it culturally current without being trendy?"
+    concepts:
+      - dating apps
+      - dating fatigue
+      - situationship
+      - ghosting
+      - breadcrumbing
+      - intentional dating
+      - IRL connection
+      - loneliness
+      - community
+      - singles culture
+    strictness: 0.8
+
+rules:
+  max_iterations: 3
+  approval_threshold: 75
+  master_veto_threshold: 50

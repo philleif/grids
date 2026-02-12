@@ -1,0 +1,255 @@
+# Seed: oh hi calling cardz -- flirting card templates for a DIY dating event
+#
+# oh hi (https://ohhi.dating) is an indie/DIY dating app built in NYC.
+# Anti-Big Dating, no VCs, nights-and-weekends, community-first.
+# This seed drives the CA grid to produce printable calling/kissing/visiting
+# card templates for a real-world craft event in Greenpoint, Brooklyn.
+
+grid:
+  width: 10
+  height: 8
+  neighborhood: moore
+
+domains:
+  - design
+  - production-tech
+  - editorial
+  - creative-production
+  - culture-crit
+
+include_execution: true
+
+project:
+  type: tauri-desktop
+  framework: vite + vanilla JS
+  output_dir: apps/calling-cardz
+  description: >
+    Interactive calling card design studio. Users select templates,
+    customize text fields, choose typography/ornaments, and export
+    print-ready PDFs. The program produces cards, not the cards themselves.
+
+complexity_budget:
+  max_screens: 8
+  max_files: 25
+
+execution:
+  min_domain_coverage: 2
+  relevance_threshold: 0.2
+
+initial_work:
+  - target: masters
+    kind: brief_chunk
+    cost_of_delay: 5.0
+    job_size: 2.0
+    content: |
+      PROGRAM: oh hi calling cardz -- printable flirting card templates for a
+      DIY dating app craft event in Greenpoint, Brooklyn (Wednesday 2/11,
+      Valentine's week 2025).
+
+      === WHO IS oh hi ===
+
+      oh hi (https://ohhi.dating) is a DIY dating app for intentional singles,
+      currently live in NYC with ~700 users. It is NOT a better dating app --
+      it's a different kind of social experience. Think: the indie record label
+      to Big Dating's major labels. Specifically the Factory Records model --
+      consistent, cool, present. The brand has been described as "punk rock"
+      enough for that to mean something.
+
+      Tagline energy: "Sick of Big Dating? So are we."
+
+      Core pillars: (1) Putting yourself out there / showing up -- participation
+      over algorithms. (2) Advice, support, singles solidarity. (3) Culture and
+      creativity -- zines, whimsy, editorial voice. (4) DIY community -- "we can
+      make this whatever we want."
+
+      Key product features: Personal ads (text and video, constraint-driven
+      self-expression), weekly quiz-based matches, group chat ("The Lobby"),
+      Love Line dating advice, IRL event calendar, and an avatar system with
+      customizable rat characters wearing hats (the mascot is a little rat).
+
+      Brand voice: Witty, warm, direct, irreverent. Reads like a smart friend
+      texting you, not a corporation. Anti-corporate, anti-VC, anti-algorithm.
+      NYC-native (Gawker-era sensibility, Hell Gate / Blackbird Spyplane reader
+      energy). Zine energy, lo-fi DIY aesthetic. Profane but warm -- "hockey stick
+      it up yours, pal!" Never mean, always fun. Emoji-forward, playful.
+      Lowercase-casual.
+
+      Design aesthetic: Yellow brand color, time-based gradients, bold playful
+      typography, rat mascot with customizable hats/fur/aura. Lo-fi zine-inspired
+      collateral alongside more polished editorial pieces.
+
+      IRL presence: oh hi has a significant offline-first strategy -- zines
+      (personals, poetry, field guides), personal ad boards in bars (Black Rabbit,
+      Desperate Losers), flyering and park tabling, events (salon cuts, comedy,
+      zine launches, video personals shoots), "kits" with tappable bands and
+      sticker QR codes. The physical artifacts feed the digital product.
+
+      Audience: Older millennials (who remember Gawker) and younger Gen-Z women.
+      Singles in NYC who are culturally engaged, slightly cynical about apps,
+      crave community. People who read Hell Gate, Blackbird Spyplane, Deez Links,
+      Ask Polly.
+
+      === THE EVENT ===
+
+      "If Hinge is the new LinkedIn, then we need to get American Psycho (but
+      DIY instead of M&A). But how, you ask? We're getting together and making
+      acquaintance/calling/kissing/visiting cards (like a business card, but for
+      flirting) in Greenpoint on Wednesday, 2/11.
+
+      Whether you're gearing up for V-Day or just braving the cold, cutie-filled
+      streets of New York day-to-day, you can keep one tucked snugly in your
+      jacket to pass along instead of settling for playing eye tag on the subway.
+
+      Happy crafting, crushes."
+
+      This is a hands-on craft event. Attendees show up, sit down, and make
+      their own cards using templates, stamps, markers, stickers. The templates
+      we produce are the starting point -- they need to be customizable, writable,
+      stampable, not precious. The vibe is community craft night, not design
+      studio. Think zine fairs, not Kinko's.
+
+      === WHAT WE'RE BUILDING ===
+
+      A set of printable card templates (standard business card size, 3.5x2")
+      that event attendees will customize by hand at the event and carry with
+      them afterward. The templates must work as both:
+      - Pre-printed blanks to fill in with markers/stamps at the event
+      - Digital files someone could customize + print at home
+
+      FORMAT: Templates are SVG with embedded raster elements. Pure vector SVG
+      will NOT have the fidelity we need -- the zine/DIY aesthetic demands
+      scanned textures, photocopied grain, hand-drawn illustrations, and found
+      imagery. The pipeline: scan or source reference graphics -> ImageMagick
+      processing (knock out to black, threshold, levels, preserve detail) ->
+      embed as high-res raster elements within the SVG structure. This gives
+      us the best of both worlds: scalable layout/typography in vector, plus
+      authentic analog texture from raster. Think of each card as a mixed-media
+      collage -- vector text frames and rules, raster textures and illustrations.
+      Final export to PDF embeds everything at print resolution (300dpi min).
+
+      === DESIGN DIRECTION ===
+
+      DIY/zine aesthetic meets Victorian calling card tradition. The moodboard
+      (Pinterest: oh-hi-calling-cardz) includes:
+      - Handwritten notes on heart-shaped doilies ("i think you're mad cute")
+      - Lace heart doilies, vintage valentine typography
+      - Cut-and-paste collage, xerox textures, risograph grain
+      - Victorian ornate borders recontextualized with subversive content
+      - Rubber stamp textures, typewriter fonts mixed with ornate script
+      - Torn paper edges, doodle margins, notebook paper
+
+      NOT polished corporate. NOT generic Canva. NOT Hinge's beige minimalism.
+      Reference the American Psycho business card scene but make it tender and
+      funny instead of psychotic -- the obsessive attention to paper stock and
+      font choice, but in service of "do you think i'm cute? check yes or no."
+
+      The cards should feel like they came from a zine distro table or a
+      community bulletin board, not a design agency. They should look like
+      something you'd find tucked into a used paperback at a Greenpoint bookshop.
+
+      === CONTENT FIELDS ===
+
+      Each card template needs space for:
+      - A name or alias (can be playful/anonymous -- "your subway crush",
+        "the one with the tote bag", a first name, whatever)
+      - A flirty tagline, pickup line, or personal ad snippet
+        (samples: "i think you're mad cute", "looking for someone to split
+        a bodega sandwich with", "my rat says we'd be compatible")
+      - Contact: oh hi username, instagram handle, phone number, or just vibes
+      - Optional: a small illustration slot -- rat mascot, heart, star, lips,
+        a tiny drawing. The oh hi rat should be available as a stamp option.
+      - Small "oh hi" wordmark or URL -- subtle, not dominant. This is a
+        calling card, not an ad. But people should know where it came from.
+
+      === VARIANTS (at least 6 templates) ===
+
+      1. "the classic" -- Victorian calling card layout. Ornate border, centered
+         script text, formal structure -- but the content is about crushes.
+         Think: "Ms. [Your Name] requests the pleasure of your company for
+         a coffee at the weird place on Manhattan Ave."
+
+      2. "the personal ad" -- Newspaper classifieds style. Columnar layout,
+         small type, abbreviations (SWF seeks...), maybe a tiny clip-art heart.
+         References oh hi's actual personal ads feature. Feels like ripping
+         something out of the Village Voice circa 1997.
+
+      3. "the love note" -- Handwritten feel. Notebook paper lines or torn
+         edges, doodle margins, "check yes or no" checkbox energy. The kind
+         of note you'd pass in class. Unfolded and creased.
+
+      4. "the american psycho" -- The parody template. Bone white. Silian Rail
+         font. "That subtle off-white coloring. The tasteful thickness of it."
+         But the text says things like "i like your vibe" and "let's get a
+         beer?" Obsessive production value in service of being casual.
+
+      5. "the zine" -- Xerox/risograph aesthetic. Cut-and-paste collage, ransom
+         note lettering mixed with typed text, photocopied texture. Feels like
+         a page torn from an oh hi zine. High-contrast B&W friendly.
+
+      6. "the valentine" -- Heart doily border, red + pink palette, retro cute
+         Valentines aesthetic. "be mine" energy but for adults who are self-aware
+         about it. Candy hearts, lace, cursive, but with a wink.
+
+      Bonus if there's room:
+      7. "the rat" -- Built around the oh hi rat mascot. The rat delivers
+         your message. Cute, weird, memorable.
+      8. "the minimalist" -- For people who think all the above is too much.
+         Clean, one line of text, lots of white space. Still warm.
+
+      === PRODUCTION SPECS ===
+
+      - Standard business card: 3.5 x 2 inches (252 x 144 pt)
+      - Printable on standard home printers (letter/A4, 8-up imposition)
+      - Source format: SVG with embedded raster elements (base64 PNG or
+        linked high-res assets). Vector for layout/type, raster for textures
+        and illustrations.
+      - Raster pipeline: scan/source -> ImageMagick (convert -threshold,
+        -level, -negate, -morphology for cleanup) -> knock out to black on
+        transparent -> embed in SVG at 300dpi equivalent resolution
+      - PDF export with trim marks, crop marks, embedded fonts and images
+      - MUST work in black & white -- not everyone has color printers, and
+        xerox/riso reproduction is part of the aesthetic. The raster elements
+        should already be 1-bit or high-contrast grayscale.
+      - High contrast designs that survive bad photocopying
+      - Generous margins for hand-cutting with scissors (no precision needed)
+      - Bleed: 0.125" on all sides (standard)
+      - Paper stock suggestions for the event: French Paper Pop-Tone (fun
+        colors, good weight), Neenah Classic Crest, or whatever cardstock
+        you can grab at the bodega. Nothing precious.
+      - Templates should have clearly marked "write here" zones for the
+        hand-customization at the event
+
+      === CULTURAL GROUNDING ===
+
+      The history of the calling card matters here. Victorian "acquaintance
+      cards" and "escort cards" were literally the original flirting technology
+      -- you'd leave one at someone's house with elaborate coded corner-folds
+      meaning "I'm interested" or "I'll call again." The Victorians also had
+      "kissing cards" with printed flirtations. This event reclaims that
+      tradition for a dating app that believes romance should be analog,
+      personal, and a little weird.
+
+      oh hi's whole thesis is that the best dating experiences are participatory
+      and cultural, not algorithmic. Making a physical card to hand to a crush
+      is the ultimate expression of that -- you're putting yourself out there
+      with your hands, not swiping. The cards should feel like artifacts of
+      genuine human effort, not advertisements for an app.
+
+      The flywheel: physical artifacts (cards) drive awareness of the digital
+      product (app). Someone gets a card, sees "oh hi" on it, looks it up.
+      But the card itself is the experience -- the app is just where you go next.
+
+      === DELIVERABLES ===
+
+      1. SVG+raster templates (editable, one per variant) -- vector layout
+         with embedded raster textures/illustrations processed via ImageMagick
+      2. High-res raster asset library (scanned/processed textures, borders,
+         illustrations as individual PNGs, knocked out to black on transparent)
+      3. Imposed PDF sheets (8-up on letter, print-ready, trim marks, all
+         raster elements embedded at 300dpi)
+      4. A one-page event style guide (so attendees understand the vibe,
+         the content suggestions, the spirit of the thing)
+      5. Variant previews showing each template filled with sample content
+         that captures oh hi's voice
+      6. ImageMagick processing recipes for each raster element (so the
+         pipeline is reproducible and new source material can be added)

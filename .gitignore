@@ -1,0 +1,26 @@
+# Ephemeral
+tmp/
+
+# macOS
+.DS_Store
+
+# Rust
+target/
+**/*.rs.bk
+
+# Python
+__pycache__/
+*.py[cod]
+*.egg-info/
+.venv/
+.env
+
+# Editors
+*.swp
+*.swo
+*~
+.idea/
+.vscode/
+
+# Node
+node_modules/

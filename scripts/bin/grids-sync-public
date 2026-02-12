@@ -1,0 +1,62 @@
+#!/usr/bin/env bash
+set -euo pipefail
+
+PRIVATE_ROOT="$(cd "$(dirname "$0")/../.." && pwd)"
+PUBLIC_ROOT="${GRIDS_PUBLIC_DIR:-$HOME/CODE/grids-public}"
+MANIFEST="$PRIVATE_ROOT/scripts/sync-public.manifest"
+
+if [ ! -d "$PUBLIC_ROOT/.git" ]; then
+  echo "Error: $PUBLIC_ROOT is not a git repo. Run: git init $PUBLIC_ROOT"
+  exit 1
+fi
+
+if [ ! -f "$MANIFEST" ]; then
+  echo "Error: manifest not found at $MANIFEST"
+  exit 1
+fi
+
+echo "Syncing $PRIVATE_ROOT -> $PUBLIC_ROOT"
+echo "Using manifest: $MANIFEST"
+echo ""
+
+RSYNC_EXCLUDE=(
+  --exclude='.venv/'
+  --exclude='__pycache__/'
+  --exclude='*.pyc'
+  --exclude='.DS_Store'
+  --exclude='tmp/'
+  --exclude='run.mp4'
+  --exclude='node_modules/'
+  --exclude='apps/'
+)
+
+while IFS= read -r line; do
+  line="${line%%#*}"
+  line="${line#"${line%%[![:space:]]*}"}"
+  line="${line%"${line##*[![:space:]]}"}"
+  [ -z "$line" ] && continue
+
+  src="$PRIVATE_ROOT/$line"
+
+  if [ -d "$src" ]; then
+    # Directory: sync into the matching destination path
+    # Trailing slash on src means "contents of", so we ensure dst exists
+    dst="$PUBLIC_ROOT/$line"
+    mkdir -p "$dst"
+    rsync -a --delete "${RSYNC_EXCLUDE[@]}" "$src" "$dst"
+    echo "  synced dir:  $line"
+  elif [ -f "$src" ]; then
+    dst="$PUBLIC_ROOT/$line"
+    mkdir -p "$(dirname "$dst")"
+    cp "$src" "$dst"
+    echo "  synced file: $line"
+  else
+    echo "  WARN: not found: $line"
+  fi
+done < "$MANIFEST"
+
+echo ""
+echo "--- Public repo status ---"
+git -C "$PUBLIC_ROOT" status --short
+echo ""
+echo "Review with: cd $PUBLIC_ROOT && git diff"
